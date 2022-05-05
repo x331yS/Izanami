@@ -1,40 +1,57 @@
-const sqlite3 = require('sqlite3').verbose();
-
-const db = new sqlite3.Database('./src/db/database.db', sqlite3.OPEN_READWRITE, (err)=>{
-    if (err) return console.error(err.message);
-    console.log("connection to database successful");
-});
+const mysql = require('mysql');
 
 
-function createProfileTable(){
-    db.run(`CREATE TABLE profiles(id, red, green, blue)`)
+const {user, password, database} = require('./credentials.json');
+var con = mysql.createConnection({
+    host: "localhost",
+    user: user,
+    password: password,
+    database: database
+  });
+
+  con.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+  });
+
+//module.exports = con;
+
+function createBasicProfiles(){
+    var sql = `CREATE TABLE profiles(id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), red INTEGER, green INTEGER, blue INTEGER)`
+    con.query(sql, function (err, result) {
+        if (err) throw err;
+        console.log("Table created");
+      });
+}
+function insertRGBValues(name,red,green,blue){
+    var sql = `INSERT INTO profiles(name, red, green, blue) VALUES('${name}','${red.toString()}','${green.toString()}','${blue.toString()}')`
+    con.query(sql, function (err, result) {
+        if (err) throw err;
+        console.log("New row inserted!");
+      });
 }
 
-function writeProfileTable(values){
-    const sql = `INSERT INTO profiles(id, red, green, blue)
-                VALUES(?,?,?,?)`
-    db.run(sql, values, (err)=>{
-        if (err) return console.error(err.message);
-    })
-    console.log("Values written");
-
-}
-
-function readRGBTable(id){
-    const sql= `SELECT * FROM profiles WHERE id = ?`;
-    db.get(sql,[id],(err,result) =>{
-        
-        if (err) {return console.error(err.message)}
-        else{
-            //dothings with result.red result.green result.blue
-        }
-        
-    })
-    
+function DeleteAllData(){
+    var sql = `DELETE FROM profiles`;
+    con.query(sql, function (err, result) {
+        if (err) throw err;
+        console.log("Number of records deleted: " + result.affectedRows);
+      });
 }
 
 
+con.end();
 
-db.close((err)=>{
-    if (err) return console.error(err.message);
-})
+    //db.run()
+
+
+
+    //const sql = `INSERT INTO profiles(id, red, green, blue)
+                //VALUES(?,?,?,?)`
+
+
+
+    //const sql= `SELECT * FROM profiles WHERE id = ?`;
+   
+
+
