@@ -28,26 +28,31 @@ pixels = neopixel.NeoPixel(
 
 
 #DB
-mydb = mysql.connector.connect(
-  host= config.host,
-  user= config.user,
-  password= config.password,
-  auth_plugin='mysql_native_password'
-)
-
-print(mydb)
 
 
 
-def test():
+
+def test(a,b,c):
     # Comment this line out if you have RGBW/GRBW NeoPixels
-    pixels.fill((255, 0, 0))
+    pixels.fill((a, b, c))
     # Uncomment this line if you have RGBW/GRBW NeoPixels
     # pixels.fill((255, 0, 0, 0))
     pixels.show()
-    time.sleep(1)
-    pixels.fill((0, 0, 0))
-    pixels.show()
+    #time.sleep(0.2)
 
-test()
+
+while True:
+  mydb = mysql.connector.connect(
+  host= config.host,
+  user= config.user,
+  password= config.password,
+  database= config.database,
+  auth_plugin='mysql_native_password'
+  )
+  mycursor = mydb.cursor(buffered=True)
+  mycursor.execute("SELECT * FROM profiles ORDER BY id DESC")
+  myresult = mycursor.fetchone()
+  print(myresult)
+  test(myresult[2],myresult[3],myresult[4])
+
 

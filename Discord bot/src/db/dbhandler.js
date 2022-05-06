@@ -14,7 +14,7 @@ var con = mysql.createConnection({
     console.log("Connected!");
   });
 
-//module.exports = con;
+
 
 function createBasicProfiles(){
     var sql = `CREATE TABLE profiles(id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), red INTEGER, green INTEGER, blue INTEGER)`
@@ -38,7 +38,6 @@ function DeleteAllData(){
         console.log("Number of records deleted: " + result.affectedRows);
       });
 }
-
 
 con.end();
 
