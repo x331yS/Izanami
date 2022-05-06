@@ -1,0 +1,17 @@
+C:\Users\Florian\Code\Trex\bin\Debug\netcoreapp3.1\Trex.exe
+C:\Users\Florian\Code\Trex\bin\Debug\netcoreapp3.1\Trex.deps.json
+C:\Users\Florian\Code\Trex\bin\Debug\netcoreapp3.1\Trex.runtimeconfig.json
+C:\Users\Florian\Code\Trex\bin\Debug\netcoreapp3.1\Trex.runtimeconfig.dev.json
+C:\Users\Florian\Code\Trex\bin\Debug\netcoreapp3.1\Trex.dll
+C:\Users\Florian\Code\Trex\bin\Debug\netcoreapp3.1\Trex.pdb
+C:\Users\Florian\Code\Trex\obj\Debug\netcoreapp3.1\Trex.csproj.AssemblyReference.cache
+C:\Users\Florian\Code\Trex\obj\Debug\netcoreapp3.1\Trex.Form1.resources
+C:\Users\Florian\Code\Trex\obj\Debug\netcoreapp3.1\Trex.Properties.Resources.resources
+C:\Users\Florian\Code\Trex\obj\Debug\netcoreapp3.1\Trex.csproj.GenerateResource.cache
+C:\Users\Florian\Code\Trex\obj\Debug\netcoreapp3.1\Trex.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Florian\Code\Trex\obj\Debug\netcoreapp3.1\Trex.AssemblyInfoInputs.cache
+C:\Users\Florian\Code\Trex\obj\Debug\netcoreapp3.1\Trex.AssemblyInfo.cs
+C:\Users\Florian\Code\Trex\obj\Debug\netcoreapp3.1\Trex.csproj.CoreCompileInputs.cache
+C:\Users\Florian\Code\Trex\obj\Debug\netcoreapp3.1\Trex.dll
+C:\Users\Florian\Code\Trex\obj\Debug\netcoreapp3.1\Trex.pdb
+C:\Users\Florian\Code\Trex\obj\Debug\netcoreapp3.1\Trex.genruntimeconfig.cache
