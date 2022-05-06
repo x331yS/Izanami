@@ -42,16 +42,4 @@ function DeleteAllData(){
 
 con.end();
 
-    //db.run()
-
-
-
-    //const sql = `INSERT INTO profiles(id, red, green, blue)
-                //VALUES(?,?,?,?)`
-
-
-
-    //const sql= `SELECT * FROM profiles WHERE id = ?`;
-   
-
 
