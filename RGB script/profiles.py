@@ -47,8 +47,21 @@ class BreathingProfile(Profile):
         time.sleep(self.refresh)
         
     def brightnessController(self,pixels):
-        wheels.brightnessBreathing(pixels)
+        if pixels.brightness >= 0.2:
+            self.x = -self.x
+        elif pixels.brightness <= 0:
+            self.x = -self.x
+            pixels.brightness = 0 
+        pixels.brightness += self.x
+        print(pixels.brightness)
 
+class ColorBreathingProfile(BreathingProfile):
+    def __init__(self):
+        super().__init__()
+        super().setRGB(0,0,255)
+        self.name = "ColorBreathing"
+    def colorController(self):
+        self.r, self.g, self.b = wheels.colorwheel(self.r,self.g,self.b,3)
 
 
 class LoadingProfile(Profile):

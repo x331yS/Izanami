@@ -23,16 +23,12 @@ num_pixels = 150
 # For RGBW NeoPixels, simply change the ORDER to RGBW or GRBW.
 ORDER = neopixel.GRB
 pixels = neopixel.NeoPixel(
-    pixel_pin, num_pixels, brightness=0.5, auto_write=False, pixel_order=ORDER
+    pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER
 )
 
-profile = profiles.SnakeProfile()
-t1= time.time()
+profile = profiles.ColorBreathingProfile()
 while True:
     profile.display(pixels)
-    if time.time()-t1 > 2:
-        profile.addToIndex()
-        t1 = time.time()
      
         
 

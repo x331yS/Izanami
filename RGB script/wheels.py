@@ -1,21 +1,12 @@
-def colorwheel(r,g,b):
+def colorwheel(r,g,b,scale = 1):
     if r<255 and b>0 and g<1:
-        r +=1
-        b -=1
+        r +=scale
+        b -=scale
     elif g<255 and r>0:
-        g +=1
-        r -=1
+        g +=scale
+        r -=scale
     elif b<255 and g>0:
-        b +=1
-        g -=1
+        b +=scale
+        g -=scale
     
     return r,g,b
-
-def brightnessBreathing(pixels):
-    if pixels.brightness >= 0.5:
-            self.x = -self.x
-    elif pixels.brightness <= 0:
-        self.x = -self.x
-        pixels.brightness = 0 
-    pixels.brightness += self.x
-    print(pixels.brightness)
