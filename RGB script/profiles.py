@@ -13,7 +13,15 @@ class Profile(object):
         self.g = g
         self.b = b
 
+    def colorController(self):
+        pass
+
+    def brightnessController(self,pixels):
+        pass
+    
     def display(self, pixels):
+        self.colorController()
+        self.brightnessController(pixels)
         pixels.fill((self.r,self.g,self.b))
         pixels.show()
 
@@ -24,10 +32,8 @@ class ColorFadeProfile(Profile):
     def __init__(self):
         super().__init__("ColorFade")
         super().setRGB(0,0,255)
-
-    def display(self, pixels):
+    def colorController(self):
         self.r, self.g, self.b = wheels.colorwheel(self.r,self.g,self.b)
-        super().display(pixels)
 
 class BreathingProfile(Profile):
     def __init__(self, refresh=0.02):
@@ -37,15 +43,12 @@ class BreathingProfile(Profile):
         self.x = 0.01
 
     def display(self, pixels):
-        if pixels.brightness >= 0.5:
-            self.x = -self.x
-        elif pixels.brightness <= 0:
-            self.x = -self.x
-            pixels.brightness = 0 
-        pixels.brightness += self.x
-        print(pixels.brightness)
         super().display(pixels)
         time.sleep(self.refresh)
+        
+    def brightnessController(self,pixels):
+        wheels.brightnessBreathing(pixels)
+
 
 
 class LoadingProfile(Profile):

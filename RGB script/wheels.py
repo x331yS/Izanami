@@ -10,3 +10,12 @@ def colorwheel(r,g,b):
         g -=1
     
     return r,g,b
+
+def brightnessBreathing(pixels):
+    if pixels.brightness >= 0.5:
+            self.x = -self.x
+    elif pixels.brightness <= 0:
+        self.x = -self.x
+        pixels.brightness = 0 
+    pixels.brightness += self.x
+    print(pixels.brightness)
