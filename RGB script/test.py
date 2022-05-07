@@ -1,6 +1,8 @@
-# SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
-# SPDX-License-Identifier: MIT
-# Simple test for NeoPixels on Raspberry Pi
+#import pip
+
+#pip.main(['install', package])
+
+
 import time
 import board
 import neopixel
@@ -24,9 +26,13 @@ pixels = neopixel.NeoPixel(
     pixel_pin, num_pixels, brightness=0.5, auto_write=False, pixel_order=ORDER
 )
 
-profile = profiles.ColorFadeProfile()
-
+profile = profiles.SnakeProfile()
+t1= time.time()
 while True:
     profile.display(pixels)
-    time.sleep(0.02)
+    if time.time()-t1 > 2:
+        profile.addToIndex()
+        t1 = time.time()
+     
+        
 
