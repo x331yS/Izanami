@@ -1,4 +1,23 @@
-def colorwheel(r,g,b,scale = 1):
+
+COLORS = {
+    "OFF":(0,0,0),
+    "WHITE":(255,255,255),
+    "RED":(255,0,0),
+    "RED_ORANGE":(255,64,0),
+    "ORANGE":(255,128,0),
+    "LIGHT_ORANGE":(255,191,0),
+    "YELLOW":(255,255,0),
+    "VERY_LIGHT_GREEN":(191,255,0),
+    "LIGHT_GREEN":(64,255,0),
+    "GREEN":(0,255,0)
+    
+}
+
+
+def colorwheel(rgb,scale = 1):
+    r=rgb[0]
+    g=rgb[1]
+    b=rgb[2]
     if r<255 and b>0 and g<1:
         r +=scale
         b -=scale
@@ -9,4 +28,4 @@ def colorwheel(r,g,b,scale = 1):
         b +=scale
         g -=scale
     
-    return r,g,b
+    return (r,g,b)
