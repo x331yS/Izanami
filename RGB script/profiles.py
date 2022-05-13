@@ -94,22 +94,25 @@ class ColorBreathingProfile(BreathingProfile):
 class LoadingProfile(Profile):
     def __init__(self,cursor=0,refresh=0.5):
         self.cursor = cursor
+        self.cursor2 = cursor
         self.refresh = refresh
         super().__init__("Loading")
         super().setRGB(wheels.COLORS["RED"])
 
     def display(self, pixels):
         pixels[self.cursor] = (self.rgb)
+        pixels[self.cursor2] = (self.rgb)
         pixels.show()
         if self.cursor<150:
             self.cursor+=1
-        if self.cursor == 149:
-            self.cursor=0
+        if self.cursor2>0:
+            self.cursor2-=1
             pixels.fill((0,0,0))
         time.sleep(self.refresh)
     
-    def resetCursor(self):
-        self.cursor=0
+    def resetCursor(self, cursor):
+        self.cursor = cursor
+        self.cursor2 = cursor
 
 class SnakeProfile(IndexProfile):
     def __init__(self, refresh=0.05):
