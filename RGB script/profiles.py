@@ -33,13 +33,15 @@ class IndexProfile(Profile):
         self.index.extend(values)
         print(self.index)
 
-    def cleanIndex(self):
+    def cleanArray(self,arr):
         indextopop = None
-        for y in range(len(self.index)):
-            if self.index[y]>150:
+        for y in range(len(arr)):
+            if arr[y]>150 or arr[y]<0:
                 indextopop=y
         if indextopop != None:
-            self.index.pop(indextopop)
+            arr.pop(indextopop)
+        return arr
+    
     def display(self, pixels):
 
         for i in range(150):
@@ -52,7 +54,7 @@ class IndexProfile(Profile):
 
         
         pixels.show()
-        self.cleanIndex()
+        self.index = self.cleanArray(self.index)
 
     
 class ColorFadeProfile(Profile):
@@ -119,13 +121,26 @@ class SnakeProfile(IndexProfile):
         super().__init__()
         super().setRGB(wheels.COLORS["WHITE"])
         self.refresh = refresh
-        self.index=[0]
+        self.index=[]
+        self.front=[]
+        self.back=[]
 
+    def addToIndex(self,values):
+        self.front.extend(values)
+        self.back.extend(values)
+    
+    
+    
     def display(self, pixels):
+        self.index = self.front + self.back
         super().display(pixels)
     
-        for y in range(len(self.index)):
-            self.index[y] += 1
+        for y in range(len(self.front)):
+            self.front[y] += 1
+        for y in range(len(self.back)):
+            self.back[y] -= 1
+        self.front=super().cleanArray(self.front)
+        self.back=super().cleanArray(self.back)
         time.sleep(self.refresh)
 
 
