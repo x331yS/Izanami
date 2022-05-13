@@ -5,6 +5,7 @@ import time
 import board
 import neopixel
 import mysql.connector
+import profiles
 
 import config
 
@@ -53,6 +54,8 @@ while True:
   mycursor.execute("SELECT * FROM profiles ORDER BY id DESC")
   myresult = mycursor.fetchone()
   print(myresult)
-  test(myresult[2],myresult[3],myresult[4])
+  print(myresult["red"],myresult["green"],myresult["blue"])
+  #print(myresult["current"])
+  #current = Factory(myresult["current"])()
 
 
