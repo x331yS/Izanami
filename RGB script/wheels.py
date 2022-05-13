@@ -29,3 +29,11 @@ def colorwheel(rgb,scale = 1):
         g -=scale
     
     return (r,g,b)
+
+def colorGradient(c1,c2):
+    i=0
+    for i in range(3):
+        if c1[i] < c2[i]:
+            c1[i]+=1
+        i+=1
+    return c1
