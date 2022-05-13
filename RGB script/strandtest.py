@@ -26,36 +26,28 @@ pixels = neopixel.NeoPixel(
 )
 
 
+mydb = mysql.connector.connect(
+host= config.host,
+user= config.user,
+password= config.password,
+database= config.database,
+auth_plugin='mysql_native_password'
+)
 
+mycursor = mydb.cursor(buffered=True)
 
 #DB
 
-
-
-
-def test(a,b,c):
-    # Comment this line out if you have RGBW/GRBW NeoPixels
-    pixels.fill((a, b, c))
-    # Uncomment this line if you have RGBW/GRBW NeoPixels
-    # pixels.fill((255, 0, 0, 0))
-    pixels.show()
-    #time.sleep(0.2)
-
+curprofile = profiles.Profile()
 
 while True:
-  mydb = mysql.connector.connect(
-  host= config.host,
-  user= config.user,
-  password= config.password,
-  database= config.database,
-  auth_plugin='mysql_native_password'
-  )
-  mycursor = mydb.cursor(buffered=True)
-  mycursor.execute("SELECT * FROM profiles ORDER BY id DESC")
+  mycursor.execute("SELECT * FROM currentprofile")
   myresult = mycursor.fetchone()
-  print(myresult)
-  print(myresult["red"],myresult["green"],myresult["blue"])
-  #print(myresult["current"])
-  #current = Factory(myresult["current"])()
+  #print(myresult["red"],myresult["green"],myresult["blue"])
 
-
+  
+  if curprofile.name!=myresult[0]:
+      
+      curprofile = profiles.Factory(myresult[0])()
+      print(curprofile)
+  curprofile.display(pixels)
