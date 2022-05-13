@@ -17,7 +17,8 @@ var con = mysql.createConnection({
 
 
 function createBasicProfiles(){
-    var sql = `CREATE TABLE profiles(id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), red INTEGER, green INTEGER, blue INTEGER)`
+    //var sql = `CREATE TABLE profiles(id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), red INTEGER, green INTEGER, blue INTEGER)`
+    var sql = `CREATE TABLE currentprofile(profile VARCHAR(255), red INTEGER, green INTEGER, blue INTEGER, scale INTEGER, toggle BOOLEAN)`
     con.query(sql, function (err, result) {
         if (err) throw err;
         console.log("Table created");
