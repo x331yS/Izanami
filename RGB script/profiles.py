@@ -126,6 +126,18 @@ class SnakeProfile(IndexProfile):
         time.sleep(self.refresh)
 
 
+def Factory(role):
+    classes = {
+        "BASIC": Profile,
+        "INDEX": IndexProfile,
+        "COLORFADE": ColorFadeProfile,
+        "BREATH": BreathingProfile,
+        "COLORBREATH": ColorBreathingProfile,
+        "LOADING": LoadingProfile,
+        "SNAKE": SnakeProfile
+    }
+    return classes[role]
+
 
 
     
