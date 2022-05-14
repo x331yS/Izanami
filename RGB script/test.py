@@ -27,9 +27,11 @@ pixels = neopixel.NeoPixel(
 )
 t1 = time.time()
 profile = profiles.SnakeProfile()
+waw=[50,51,52]
 while True:
     profile.display(pixels)
     if time.time()-t1 > 4:
-        profile.addToIndex(75)
+        profile.addToIndex(waw)
+        t1= time.time()
         
 
