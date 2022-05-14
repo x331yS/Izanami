@@ -1,6 +1,6 @@
 import wheels
 import time
-
+from pixelclass import *
 class Profile(object):
     def __init__(self,name="BASIC"):
         self.name = name
@@ -142,6 +142,46 @@ class SnakeProfile(IndexProfile):
         self.back=super().cleanArray(self.back)
         time.sleep(self.refresh)
 
+class ColorWaveProfile(Profile):
+    def __init__(self,refresh=0.01):
+        super().__init__("COLORWAVE")
+        self.pixelscolors = PixelColors(150)
+        self.refresh = refresh
+        self.startcolor = wheels.COLORS["GREEN"]
+        self.target = (0,0,255)
+        self.rgb = self.startcolor
+        self.pixelscolors.fillAll(self.startcolor)
+        
+        
+        
+    def start(self, pixels):
+        for i in range(150):
+            pixels[i] = self.rgb
+            self.rgb = wheels.colorGradient(self.rgb,self.target)
+            self.pixelscolors.setColor(i,self.rgb)
+            pixels.show()
+        
+
+    def setColors(c1,c2):
+        self.startcolor = c1
+        self.target = c2
+    
+    def display(self,pixels):
+        for i in range(150):
+            if self.pixelscolors.getColor(i) == self.target:
+                self.pixelscolors.setHighLow(i,False)
+            elif self.pixelscolors.getColor(i) == self.startcolor:
+                self.pixelscolors.setHighLow(i,True)
+            
+            if self.pixelscolors.getHighLow(i):
+                self.pixelscolors.setColor(i,wheels.colorGradient(self.pixelscolors.getColor(i),self.target))
+            else:
+                self.pixelscolors.setColor(i,wheels.colorGradient(self.pixelscolors.getColor(i),self.startcolor))
+
+            pixels[i] = self.pixelscolors.getColor(i)
+ 
+        pixels.show()
+        time.sleep(self.refresh)
 
 def Factory(role):
     classes = {

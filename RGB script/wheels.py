@@ -9,7 +9,8 @@ COLORS = {
     "YELLOW":(255,255,0),
     "VERY_LIGHT_GREEN":(191,255,0),
     "LIGHT_GREEN":(64,255,0),
-    "GREEN":(0,255,0)
+    "GREEN":(0,255,0),
+    "BLUE":(0,0,255)
     
 }
 
@@ -30,9 +31,17 @@ def colorwheel(rgb,scale = 1):
     
     return (r,g,b)
 
-def colorGradient(c1,c2):
+def colorGradient(c,c2,scale=1):
+    c = list(c)
     for i in range(3):
-        if c1[i] < c2[i]:
-            c1[i]+=1
+        if c[i] < c2[i]:
+            c[i]+=scale
+            if c[i] >255:
+                c[i] = 255
+        elif c[i] > c2[i]:
+            c[i]-=scale
+            if c[i] < 0:
+                c[i] = 0
         i+=1
-    return c1
+    c = tuple(c)
+    return c

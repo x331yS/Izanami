@@ -25,13 +25,10 @@ ORDER = neopixel.GRB
 pixels = neopixel.NeoPixel(
     pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER
 )
-t1 = time.time()
-profile = profiles.SnakeProfile()
-waw=[50,51,52]
+profile = profiles.ColorWaveProfile()
+profile.start(pixels)
 while True:
     profile.display(pixels)
-    if time.time()-t1 > 4:
-        profile.addToIndex(waw)
-        t1= time.time()
+    
         
 
