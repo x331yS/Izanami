@@ -52,7 +52,7 @@ class IndexProfile(Profile):
             if i not in self.index:
                 pixels[i] = (0,0,0)
 
-        
+        print(self.index)
         pixels.show()
         self.index = self.cleanArray(self.index)
 
@@ -109,7 +109,6 @@ class LoadingProfile(Profile):
             self.cursor+=1
         if self.cursor2>0:
             self.cursor2-=1
-            pixels.fill((0,0,0))
         time.sleep(self.refresh)
     
     def resetCursor(self, cursor):
