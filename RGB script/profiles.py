@@ -2,7 +2,7 @@ import wheels
 import time
 
 class Profile(object):
-    def __init__(self,name="basic"):
+    def __init__(self,name="BASIC"):
         self.name = name
         self.rgb = wheels.COLORS["YELLOW"]
 
@@ -25,8 +25,8 @@ class Profile(object):
         return f"This is a {self.name} profile\nRGB current values : ({self.rgb}) "
 
 class IndexProfile(Profile):
-    def __init__(self):
-        super().__init__("Index")
+    def __init__(self,name="INDEX"):
+        super().__init__(name)
         self.index = [0] 
     
     def addToIndex(self,values):
@@ -59,14 +59,14 @@ class IndexProfile(Profile):
     
 class ColorFadeProfile(Profile):
     def __init__(self):
-        super().__init__("ColorFade")
+        super().__init__("COLORFADE")
         super().setRGB(wheels.COLORS["RED"])
     def colorController(self):
         self.rgb = wheels.colorwheel(self.rgb)
 
 class BreathingProfile(Profile):
     def __init__(self, refresh=0.02):
-        super().__init__("Breathing")
+        super().__init__("BREATH")
         super().setRGB(wheels.COLORS["WHITE"])
         self.refresh = refresh
         self.x = 0.01
@@ -88,7 +88,7 @@ class ColorBreathingProfile(BreathingProfile):
     def __init__(self):
         super().__init__()
         super().setRGB(wheels.COLORS["GREEN"])
-        self.name = "ColorBreathing"
+        self.name = "COLORBREATH"
     def colorController(self):
         self.rgb = wheels.colorwheel(self.rgb,3)
 
@@ -98,7 +98,7 @@ class LoadingProfile(Profile):
         self.cursor = cursor
         self.cursor2 = cursor
         self.refresh = refresh
-        super().__init__("Loading")
+        super().__init__("LOADING")
         super().setRGB(wheels.COLORS["RED"])
 
     def display(self, pixels):
@@ -117,7 +117,7 @@ class LoadingProfile(Profile):
 
 class SnakeProfile(IndexProfile):
     def __init__(self, refresh=0.05):
-        super().__init__()
+        super().__init__("SNAKE")
         super().setRGB(wheels.COLORS["WHITE"])
         self.refresh = refresh
         self.index=[]
