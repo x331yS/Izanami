@@ -147,7 +147,7 @@ class ColorWaveProfile(Profile):
         super().__init__("COLORWAVE")
         self.pixelscolors = PixelColors(150)
         self.refresh = refresh
-        self.startcolor = wheels.COLORS["GREEN"]
+        self.startcolor = wheels.COLORS["RED"]
         self.target = (0,0,255)
         self.rgb = self.startcolor
         self.pixelscolors.fillAll(self.startcolor)
@@ -156,13 +156,22 @@ class ColorWaveProfile(Profile):
         
     def start(self, pixels):
         for i in range(150):
-            pixels[i] = self.rgb
-            self.rgb = wheels.colorGradient(self.rgb,self.target)
+
+            self.rgb = wheels.colorGradient(self.rgb,self.target,20)
             self.pixelscolors.setColor(i,self.rgb)
+
+            if self.rgb == self.target:
+                self.target = self.startcolor
+                self.startcolor = self.rgb
+            elif self.rgb == self.startcolor:
+                self.startcolor = self.target
+                self.target = self.rgb
+
+            pixels[i] = self.rgb
             pixels.show()
         
 
-    def setColors(c1,c2):
+    def setColors(self,c1,c2):
         self.startcolor = c1
         self.target = c2
     
@@ -174,7 +183,7 @@ class ColorWaveProfile(Profile):
                 self.pixelscolors.setHighLow(i,True)
             
             if self.pixelscolors.getHighLow(i):
-                self.pixelscolors.setColor(i,wheels.colorGradient(self.pixelscolors.getColor(i),self.target))
+                self.pixelscolors.setColor(i,wheels.colorGradient(self.pixelscolors.getColor(i),self.target,))
             else:
                 self.pixelscolors.setColor(i,wheels.colorGradient(self.pixelscolors.getColor(i),self.startcolor))
 
