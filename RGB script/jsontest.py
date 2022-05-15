@@ -1,15 +1,10 @@
-#import pip
-
-#pip.main(['install', package])
-
-
 import time
 import board
 import neopixel
-import profiles
+import json
 
 import config
-
+import profiles
 
 
 # Choose an open pin connected to the Data In of the NeoPixel strip, i.e. board.D18
@@ -25,9 +20,20 @@ ORDER = neopixel.GRB
 pixels = neopixel.NeoPixel(
     pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER
 )
-profile = profiles.ColorFadeProfile(pixels)
-while True:
-    profile.display()
-    
-        
 
+
+curprofile = profiles.Profile(pixels)
+
+while True:
+    try:
+        f = open('curprof.json')
+        myresult = json.load(f)
+
+  
+        if curprofile.name!=myresult["profile"]:
+            curprofile = profiles.Factory(myresult['profile'])(pixels)
+            print(curprofile)
+    except:
+        print('error retrieving profile')
+    
+    curprofile.display()
