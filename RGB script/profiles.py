@@ -145,7 +145,7 @@ class SnakeProfile(IndexProfile):
         time.sleep(self.refresh)
 
 class ColorWaveProfile(Profile):
-    def __init__(self,pixels,refresh=0.01):
+    def __init__(self,pixels,refresh=0.001):
         super().__init__(pixels,"COLORWAVE")
         self.pixelscolors = PixelColors(150)
         self.refresh = refresh
