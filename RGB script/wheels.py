@@ -1,3 +1,4 @@
+import random
 
 COLORS = {
     "OFF":(0,0,0),
@@ -44,4 +45,10 @@ def colorGradient(c,c2,scale=3):
                 c[i] = 0
         i+=1
     c = tuple(c)
+    return c
+
+def randomColorGradient(c,c2,scale=3):
+    rand = random.randint(0,255)
+    for i in range(rand) :
+        c = colorGradient(c,c2,scale)
     return c

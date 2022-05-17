@@ -144,6 +144,30 @@ class SnakeProfile(IndexProfile):
         self.back=super().cleanArray(self.back)
         time.sleep(self.refresh)
 
+class CometProfile(IndexProfile):
+    def __init__(self,pixels, refresh=0.05):
+        super().__init__(pixels,"COMET")
+        super().setRGB(wheels.COLORS["WHITE"])
+        self.refresh = refresh
+        self.index=[]
+        self.x = 1
+
+    def addToIndex(self,values):
+        self.index.extend(values)
+    
+    
+    def display(self):
+        super().display()
+    
+        for y in range(len(self.index)):
+            if self.index[y] == 150 or self.index[y] == 0:
+                self.x = -self.x
+            self.index[y] += self.x
+        self.index=super().cleanArray(self.index)
+        time.sleep(self.refresh)
+
+
+
 class ColorWaveProfile(Profile):
     def __init__(self,pixels,refresh=0.001):
         super().__init__(pixels,"COLORWAVE")
@@ -177,6 +201,7 @@ class ColorWaveProfile(Profile):
     def setColors(self,c1,c2):
         self.startcolor = c1
         self.target = c2
+        self.start()
     
     def display(self):
         for i in range(150):
@@ -194,6 +219,36 @@ class ColorWaveProfile(Profile):
  
         self.pixels.show()
         time.sleep(self.refresh)
+
+
+class StarsProfile(Profile):
+    def __init__(self,pixels,refresh=0.001):
+        super().__init__(pixels,"STARS")
+        self.pixelscolors = PixelColors(150)
+        self.refresh = refresh
+        self.startcolor = wheels.COLORS["BLUE"]
+        self.target = (255,255,255)
+        self.rgb = self.startcolor
+        self.pixelscolors.fillAll(self.startcolor)
+        self.start()
+
+    def start(self):
+        for i in range(150):
+
+            self.rgb = wheels.randomColorGradient(self.rgb,self.target,20)
+            self.pixelscolors.setColor(i,self.rgb)
+
+            if self.rgb == self.target:
+                self.target = self.startcolor
+                self.startcolor = self.rgb
+            elif self.rgb == self.startcolor:
+                self.startcolor = self.target
+                self.target = self.rgb
+
+            self.pixels[i] = self.rgb
+            self.pixels.show()
+
+
 
 def Factory(role):
     classes = {
