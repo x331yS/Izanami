@@ -11,7 +11,8 @@ COLORS = {
     "VERY_LIGHT_GREEN":(191,255,0),
     "LIGHT_GREEN":(64,255,0),
     "GREEN":(0,255,0),
-    "BLUE":(0,0,255)
+    "BLUE":(0,0,255),
+    "CYAN":(0, 255, 255)
     
 }
 
@@ -47,7 +48,7 @@ def colorGradient(c,c2,scale=3):
     c = tuple(c)
     return c
 
-def randomColorGradient(c,c2,scale=3):
+def randomColorGradient(c,c2,scale=2):
     rand = random.randint(0,255)
     for i in range(rand) :
         c = colorGradient(c,c2,scale)
