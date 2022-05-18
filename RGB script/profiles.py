@@ -149,21 +149,20 @@ class CometProfile(IndexProfile):
         super().__init__(pixels,"COMET")
         super().setRGB(wheels.COLORS["WHITE"])
         self.refresh = refresh
-        self.index=[]
+        self.index=[1,2,3]
         self.x = 1
 
-    def addToIndex(self,values):
-        self.index.extend(values)
-    
-    
+    def cleanArray(self, arr):
+        return arr
     def display(self):
         super().display()
     
         for y in range(len(self.index)):
             if self.index[y] == 150 or self.index[y] == 0:
                 self.x = -self.x
+                break
+        for y in range(len(self.index)):
             self.index[y] += self.x
-        self.index=super().cleanArray(self.index)
         time.sleep(self.refresh)
 
 
@@ -173,8 +172,8 @@ class ColorWaveProfile(Profile):
         super().__init__(pixels,"COLORWAVE")
         self.pixelscolors = PixelColors(150)
         self.refresh = refresh
-        self.startcolor = wheels.COLORS["RED"]
-        self.target = (0,0,255)
+        self.startcolor = wheels.COLORS["GREEN"]
+        self.target = wheels.COLORS["CYAN"]
         self.rgb = self.startcolor
         self.pixelscolors.fillAll(self.startcolor)
         self.start()
@@ -227,7 +226,7 @@ class StarsProfile(Profile):
         self.pixelscolors = PixelColors(150)
         self.refresh = refresh
         self.startcolor = wheels.COLORS["BLUE"]
-        self.target = (255,255,255)
+        self.target = wheels.COLORS["WHITE"]
         self.rgb = self.startcolor
         self.pixelscolors.fillAll(self.startcolor)
         self.start()
@@ -235,7 +234,7 @@ class StarsProfile(Profile):
     def start(self):
         for i in range(150):
 
-            self.rgb = wheels.randomColorGradient(self.rgb,self.target,20)
+            self.rgb = wheels.randomColorGradient(self.rgb,self.target,2)
             self.pixelscolors.setColor(i,self.rgb)
 
             if self.rgb == self.target:
@@ -247,6 +246,22 @@ class StarsProfile(Profile):
 
             self.pixels[i] = self.rgb
             self.pixels.show()
+    def display(self):
+        for i in range(150):
+            if self.pixelscolors.getColor(i) == self.target:
+                self.pixelscolors.setHighLow(i,False)
+            elif self.pixelscolors.getColor(i) == self.startcolor:
+                self.pixelscolors.setHighLow(i,True)
+            
+            if self.pixelscolors.getHighLow(i):
+                self.pixelscolors.setColor(i,wheels.colorGradient(self.pixelscolors.getColor(i),self.target,))
+            else:
+                self.pixelscolors.setColor(i,wheels.colorGradient(self.pixelscolors.getColor(i),self.startcolor))
+
+            self.pixels[i] = self.pixelscolors.getColor(i)
+ 
+        self.pixels.show()
+        time.sleep(self.refresh)
 
 
 
@@ -259,7 +274,9 @@ def Factory(role):
         "COLORBREATH": ColorBreathingProfile,
         "LOADING": LoadingProfile,
         "SNAKE": SnakeProfile,
-        "COLORWAVE": ColorWaveProfile
+        "COMET": CometProfile,
+        "COLORWAVE": ColorWaveProfile,
+        "STARS": StarsProfile
     }
     return classes[role]
 
