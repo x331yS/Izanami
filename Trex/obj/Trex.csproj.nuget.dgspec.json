@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Florian\\Code\\Trex\\Trex.csproj": {}
+    "C:\\Users\\Florian\\Code\\Izanami\\Trex\\Trex.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Florian\\Code\\Trex\\Trex.csproj": {
+    "C:\\Users\\Florian\\Code\\Izanami\\Trex\\Trex.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Florian\\Code\\Trex\\Trex.csproj",
+        "projectUniqueName": "C:\\Users\\Florian\\Code\\Izanami\\Trex\\Trex.csproj",
         "projectName": "Trex",
-        "projectPath": "C:\\Users\\Florian\\Code\\Trex\\Trex.csproj",
+        "projectPath": "C:\\Users\\Florian\\Code\\Izanami\\Trex\\Trex.csproj",
         "packagesPath": "C:\\Users\\Florian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Florian\\Code\\Trex\\obj\\",
+        "outputPath": "C:\\Users\\Florian\\Code\\Izanami\\Trex\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Florian\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.29, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

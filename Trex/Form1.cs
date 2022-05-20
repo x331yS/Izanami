@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Trex
 {
@@ -18,9 +19,14 @@ namespace Trex
         int score = 0; // default score integer set to 0
         int obstacleSpeed = 10; // the default speed for the obstacles
         Random rnd = new Random(); // create a new random class
+         MySqlConnection connection = new MySqlConnection(String.Format("server={0};port={1};user id={2}; password={3}; database={4}; SslMode={5}", config.server, config.port, config.user, config.password , config.database, config.SslMode));
+
 
         public Form1()
         {
+            connection.Open();
+
+    
             InitializeComponent();
 
             resetGame(); // run the reset game function
@@ -32,7 +38,10 @@ namespace Trex
             trex.Top += jumpSpeed;
 
             // show the score on the score text label
+            
             scoreText.Text = "Score: " + score;
+           
+
 
             // if jumping is true and force is less than 0
             // then change jumping to false
@@ -70,6 +79,17 @@ namespace Trex
                         x.Left = this.ClientSize.Width + rnd.Next(200, 800);
                         // we will add one to the score
                         score++;
+                         string query = $"UPDATE currentprofile SET profile = 'Trex',scale = '{score}'";
+                        MySqlCommand command = new MySqlCommand(query, this.connection);
+                        try
+                        {
+                        command.ExecuteNonQuery();
+                        Console.WriteLine("Records Inserted Successfully");
+                        }
+                        catch (MySqlException exception)
+                        {
+                        Console.WriteLine("Error Generated. Details: " + exception.ToString());
+                         }
                     }
 
                     // if the t rex collides with the obstacles
@@ -83,6 +103,18 @@ namespace Trex
                         // show press r to restart on the score text label
                         scoreText.Text = "Press R to restart";
                         finalScore.Text = "Your Final score is " + score;
+                        score=-1;
+                        string query = $"UPDATE currentprofile SET profile = 'Trex',scale = '{score}'";
+                        MySqlCommand command = new MySqlCommand(query, this.connection);
+                        try
+                        {
+                        command.ExecuteNonQuery();
+                        Console.WriteLine("Records Inserted Successfully");
+                        }
+                        catch (MySqlException exception)
+                        {
+                        Console.WriteLine("Error Generated. Details: " + exception.ToString());
+                         }
 
 
                     }
@@ -146,6 +178,17 @@ namespace Trex
             obstacleSpeed = 10; // set obstacle speed back to 10
             scoreText.Text = "Score: " + score; // change the score text to just show the score
             trex.Image = Properties.Resources.running; // change the t rex image to running
+            string query = $"UPDATE currentprofile SET profile = 'Trex',scale = '{score}'";
+                        MySqlCommand command = new MySqlCommand(query, this.connection);
+                        try
+                        {
+                        command.ExecuteNonQuery();
+                        Console.WriteLine("Records Inserted Successfully");
+                        }
+                        catch (MySqlException exception)
+                        {
+                        Console.WriteLine("Error Generated. Details: " + exception.ToString());
+                         }
 
             foreach (Control x in this.Controls)
             {
