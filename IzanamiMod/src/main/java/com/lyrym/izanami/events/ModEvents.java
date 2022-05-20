@@ -1,5 +1,6 @@
 package com.lyrym.izanami.events;
 
+import com.lyrym.izanami.DBHandler.DB;
 import com.lyrym.izanami.Izanami;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
@@ -20,7 +21,9 @@ public class ModEvents {
 
             if(event.getEntity() instanceof Player){
                 Player player = ((Player) event.getEntity());
-                System.out.println(player.getHealth());
+                DB.UpdateProfile((int)Math.floor(player.getHealth() - event.getAmount()));
+                System.out.println(Math.floor(player.getHealth() - event.getAmount()));
+
             }
         }
 
