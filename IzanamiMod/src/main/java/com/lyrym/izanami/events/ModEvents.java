@@ -21,7 +21,7 @@ public class ModEvents {
 
             if(event.getEntity() instanceof Player){
                 Player player = ((Player) event.getEntity());
-                //DB.UpdateProfile((int)Math.floor(player.getHealth() - event.getAmount()));
+                DB.UpdateProfile((int)Math.floor(player.getHealth() - event.getAmount()));
                 System.out.println(Math.floor(player.getHealth() - event.getAmount()));
 
             }

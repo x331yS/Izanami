@@ -18,7 +18,7 @@ public class DB {
     private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
 
 
-    public static Connection getConnectiondeprecated(){
+    public static Connection getConnection(){
         String DB_URL = null;
         String DB_USERNAME = null;
         String DB_PASSWORD = null;
@@ -40,9 +40,9 @@ public class DB {
             //Register the JDBC driver
             DriverManager.registerDriver (new Driver());
             //Class.forName(DB_DRIVER);
-
+            System.out.println(DB_URL);
             //Open the connection
-            conn = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+            conn = DriverManager.getConnection(DB_URL,DB_USERNAME,DB_PASSWORD);
 
             if(conn != null){
                 System.out.println("Successfully connected.");
@@ -60,11 +60,11 @@ public class DB {
         Connection conn = null ;
         Statement statement = null;
 
-        String query = String.format("UPDATE currentprofile SET profile = 'MINECRAFT' scale = '$s'",score);
+        String query = String.format("UPDATE currentprofile SET profile = 'MINECRAFT', scale = %s",score);
 
         try{
             //get connection
-            conn = getConnectiondeprecated();
+            conn = getConnection();
 
             //create statement
             statement = conn.createStatement();
