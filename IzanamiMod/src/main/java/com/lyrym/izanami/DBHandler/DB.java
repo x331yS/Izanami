@@ -1,25 +1,27 @@
 package com.lyrym.izanami.DBHandler;
 
+import com.mysql.cj.jdbc.Driver;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.module.Configuration;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 import java.util.Properties;
 
+
+
 public class DB {
     //JDBC and database properties.
-    private static final String DB_DRIVER =
-            "com.mysql.jdbc.Driver";
+    private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
 
 
     public static Connection getConnection(){
         String DB_URL = null;
         String DB_USERNAME = null;
         String DB_PASSWORD = null;
-
-
         try(InputStream input = new FileInputStream("config.properties")) {
 
             Properties prop = new Properties();
@@ -31,16 +33,16 @@ public class DB {
             DB_USERNAME = prop.getProperty("db.user");
             DB_PASSWORD = prop.getProperty("db.password");
         } catch (IOException ex) {
-
+            ex.printStackTrace();
         }
-        Connection conn = null;
+        Connection conn;
         try{
             //Register the JDBC driver
-            Class.forName(DB_DRIVER);
+            DriverManager.registerDriver (new Driver());
+            //Class.forName(DB_DRIVER);
 
             //Open the connection
-            conn = DriverManager.
-                    getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+            conn = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
 
             if(conn != null){
                 System.out.println("Successfully connected.");
@@ -49,6 +51,7 @@ public class DB {
             }
         }catch(Exception e){
             e.printStackTrace();
+            conn = null;
         }
         return conn;
     }

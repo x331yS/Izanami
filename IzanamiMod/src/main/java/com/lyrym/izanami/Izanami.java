@@ -1,5 +1,6 @@
 package com.lyrym.izanami;
 
+import com.lyrym.izanami.DBHandler.DB;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -43,6 +44,7 @@ public class Izanami
     {
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
+        DB.UpdateProfile(69);
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
