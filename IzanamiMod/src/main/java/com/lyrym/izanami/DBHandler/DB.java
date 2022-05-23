@@ -18,7 +18,7 @@ public class DB {
     private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
 
 
-    public static Connection getConnection(){
+    public static Connection getConnectiondeprecated(){
         String DB_URL = null;
         String DB_USERNAME = null;
         String DB_PASSWORD = null;
@@ -57,14 +57,14 @@ public class DB {
     }
 
     public static void UpdateProfile(int score){
-        Connection conn = null;
+        Connection conn = null ;
         Statement statement = null;
 
         String query = String.format("UPDATE currentprofile SET profile = 'MINECRAFT' scale = '$s'",score);
 
         try{
             //get connection
-            conn = getConnection();
+            conn = getConnectiondeprecated();
 
             //create statement
             statement = conn.createStatement();

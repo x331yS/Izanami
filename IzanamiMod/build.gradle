@@ -11,7 +11,7 @@ buildscript {
 }
 
 plugins {
-    id 'com.github.johnrengelman.shadow' version '6.1.0'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
 apply plugin: 'net.minecraftforge.gradle'
@@ -101,11 +101,22 @@ repositories {
     //     dir 'libs'
     // }
 }
-
+configurations {
+    library
+    implementation.extendsFrom library
+    shade
+    implementation.extendsFrom shade
+}
+minecraft.runs.all {
+    lazyToken('minecraft_classpath') {
+        configurations.library.copyRecursive().resolve().collect { it.absolutePath }.join(File.pathSeparator)
+    }
+}
 dependencies {
 
     minecraft 'net.minecraftforge:forge:1.18-38.0.17'
-    shadow('mysql:mysql-connector-java:8.0.16')
+    shade('mysql:mysql-connector-java:8.0.16')
+    library('mysql:mysql-connector-java:8.0.16')
 
 
 
@@ -124,6 +135,7 @@ dependencies {
 
 // Example for how to get properties into the manifest for reading at runtime.
 jar {
+    archiveClassifier = 'slim'
     manifest {
         attributes([
                 "Specification-Title"     : "izanami",
@@ -138,12 +150,15 @@ jar {
 }
 shadowJar {
     classifier ''
-    configurations = [project.configurations.shadow]
+    configurations = [project.configurations.shade]
+    relocate 'com.mysql', "${project.group}.relocated.mysql"
+    finalizedBy 'reobfShadowJar'
 }
+assemble.dependsOn shadowJar
 reobf {
     shadowJar {}
 }
-shadowJar.finalizedBy('reobfShadowJar')
+
 
 
 // Example configuration to allow publishing using the maven-publish plugin
