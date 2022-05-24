@@ -4,7 +4,7 @@ import neopixel
 import json
 
 import config
-import profiles
+from factory import *
 
 
 # Choose an open pin connected to the Data In of the NeoPixel strip, i.e. board.D18
@@ -18,21 +18,22 @@ num_pixels = 150
 # For RGBW NeoPixels, simply change the ORDER to RGBW or GRBW.
 ORDER = neopixel.GRB
 pixels = neopixel.NeoPixel(
-    pixel_pin, num_pixels, brightness=1, auto_write=False, pixel_order=ORDER
+    pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER
 )
 
 
-curprofile = profiles.Profile(pixels)
+curprofile = Profile(pixels)
 
 while True:
     try:
         f = open('curprof.json')
         myresult = json.load(f)
-
-  
+           
         if curprofile.name!=myresult["profile"]:
-            curprofile = profiles.Factory(myresult['profile'])(pixels)
+            curprofile = Factory(myresult['profile'])(pixels)
             print(curprofile)
+        if curprofile.name == "MINECRAFT":
+            curprofile.setScale(myresult['scale'])
     except:
         print('error retrieving profile')
     

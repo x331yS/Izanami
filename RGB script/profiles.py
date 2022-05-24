@@ -5,7 +5,7 @@ class Profile(object):
     def __init__(self,pixels,name="BASIC"):
         self.pixels = pixels
         self.name = name
-        self.rgb = wheels.COLORS["YELLOW"]
+        self.rgb = wheels.COLORS["BLUE"]
 
     def setRGB(self,rgb):
         self.rgb = rgb
@@ -262,24 +262,6 @@ class StarsProfile(Profile):
  
         self.pixels.show()
         time.sleep(self.refresh)
-
-
-
-def Factory(role):
-    classes = {
-        "BASIC": Profile,
-        "INDEX": IndexProfile,
-        "COLORFADE": ColorFadeProfile,
-        "BREATH": BreathingProfile,
-        "COLORBREATH": ColorBreathingProfile,
-        "LOADING": LoadingProfile,
-        "SNAKE": SnakeProfile,
-        "COMET": CometProfile,
-        "COLORWAVE": ColorWaveProfile,
-        "STARS": StarsProfile
-    }
-    return classes[role]
-
 
 
     

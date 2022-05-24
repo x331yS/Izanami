@@ -6,7 +6,9 @@ class GameProfile():
     def __init__(self,pixels,name="GAME"):
         self.pixels = pixels
         self.name = name
-        self.curprofile = Profile(pixels,name)
+        self.curprofile = Profile(pixels)
+        print(self.curprofile)
+        self.deathcolor = wheels.COLORS["RED"]
         
     def mainChanges(self):
         pass
@@ -17,17 +19,24 @@ class GameProfile():
 
 
 class MinecraftProfile(GameProfile):
-    def __init__(self,pixels,name="MINECRAFT"):
-        super().__init__(pixels,name)
+    def __init__(self,pixels):
+        super().__init__(pixels,"MINECRAFT")
         self.scale = 20
     def setScale(self,scale):
         self.scale = scale
     def mainChanges(self):
-        if self.scale<=0:
-            curprofile= BreathingProfile(self.pixels,self.name)
-            curprofile.rgb = wheels.COLORS["RED"]
+        if self.scale<=0 and not self.curprofile.name == "BREATH":
+            self.curprofile = BreathingProfile(self.pixels)
+            self.curprofile.rgb = self.deathcolor
             return
-        x = 255*self.scale/20
+        elif self.scale<=0:
+            return
+        if self.scale>=50 and not self.curprofile.name =="BASIC":
+            self.curprofile = Profile(self.pixels)
+            self.curprofile.rgb = color,wheels.COLORS["GREEN"]
+        x = round(255*self.scale/20)
+        color = self.deathcolor
         for i in range(x):
-            curprofile.rgb = wheels.colorGradient(wheels.COLORS["RED"],wheels.COLORS["GREEN"],1)
+            color = wheels.colorGradient(color,wheels.COLORS["GREEN"],1)
+        self.curprofile.rgb = color
 
