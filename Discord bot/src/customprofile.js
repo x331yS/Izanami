@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const {user, password, database} = require('./db/credentials.json');
+const {host, user, password, database} = require('./db/credentials.json');
 const mysql = require('mysql');
 
 
@@ -20,7 +20,7 @@ module.exports = {
         const blue = interaction.options.getInteger('blue');
 
         var con = mysql.createConnection({
-            host: "localhost",
+            host: host,
             user: user,
             password: password,
             database: database
