@@ -44,7 +44,7 @@ public class Izanami
     {
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
-        DB.UpdateProfile(69);
+        //DB.UpdateProfile(69);
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
