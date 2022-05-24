@@ -17,6 +17,9 @@ class GameProfile():
         self.mainChanges()
         self.curprofile.display()
 
+    def __str__(self):
+        print(f"This is a {self.name} Profile")
+
 
 class MinecraftProfile(GameProfile):
     def __init__(self,pixels):
