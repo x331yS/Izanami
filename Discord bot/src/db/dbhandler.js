@@ -1,9 +1,9 @@
 const mysql = require('mysql');
 
 
-const {user, password, database} = require('./credentials.json');
+const {host, user, password, database} = require('./credentials.json');
 var con = mysql.createConnection({
-    host: "localhost",
+    host: host,
     user: user,
     password: password,
     database: database
