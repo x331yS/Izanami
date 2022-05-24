@@ -14,7 +14,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "UPDATE currentprofile SET profile = 'WEBSITE', r=$r, g=$g, b=$b";
+$sql = "UPDATE currentprofile SET profile = 'WEBSITE', red=$r, green=$g, blue=$b";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
@@ -24,5 +24,5 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-header("Location: index.html");
+header("Location: /");
 ?>
