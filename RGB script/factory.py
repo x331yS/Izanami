@@ -12,6 +12,8 @@ def Factory(role):
         "COMET": CometProfile,
         "COLORWAVE": ColorWaveProfile,
         "STARS": StarsProfile,
+        "WEBSITE": WebProfile,
         "MINECRAFT": MinecraftProfile
+        
     }
     return classes[role]

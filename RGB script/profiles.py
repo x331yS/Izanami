@@ -263,5 +263,12 @@ class StarsProfile(Profile):
         self.pixels.show()
         time.sleep(self.refresh)
 
-
+class WebProfile(Profile):
+    def __init__(self,pixels):
+        super().__init__(pixels)
+        super().setRGB(wheels.COLORS["CYAN"])
+        self.name = "WEBSITE"
+    def setRGB(self,rgb):
+        super().setRGB(rgb)
+        print(f"Changed RGB to : {rgb}")
     

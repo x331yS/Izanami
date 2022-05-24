@@ -18,7 +18,13 @@ while True:
     mycursor = mydb.cursor()
     mycursor.execute("SELECT * FROM currentprofile")
     myresult = mycursor.fetchone()
-    json_string = {"profile":myresult[0],"scale":myresult[4]}
+    json_string = {
+        "profile":myresult[0],
+        "red": myresult[1],
+        "green": myresult[2],
+        "blue": myresult[3],
+        "scale":myresult[4]
+        }
 
     with open('curprof.json', 'w') as outfile:
         json.dump(json_string, outfile)
