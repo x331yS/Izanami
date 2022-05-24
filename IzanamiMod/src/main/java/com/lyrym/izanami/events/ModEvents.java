@@ -51,8 +51,8 @@ public class ModEvents {
         }
         if(event.getEntity() instanceof Player){
             Player player = ((Player) event.getPlayer());
-            DB.UpdateProfile(Math.round(player.getHealth()));
-            System.out.println(Math.round(player.getHealth()));
+            DB.UpdateProfile(50);
+            System.out.println(50);
 
         }
     }
@@ -63,8 +63,8 @@ public class ModEvents {
         }
         if(event.getEntity() instanceof Player){
             Player player = ((Player) event.getEntity());
-            DB.UpdateProfile(Math.round(player.getHealth()));
-            System.out.println(Math.round(player.getHealth()));
+            DB.UpdateProfile(-100);
+            System.out.println(-100);
 
         }
     }

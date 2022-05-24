@@ -25,7 +25,7 @@ class MinecraftProfile(GameProfile):
     def setScale(self,scale):
         self.scale = scale
     def mainChanges(self):
-        if self.scale<=0 and not self.curprofile.name == "BREATH":
+        if self.scale<=-100 and not self.curprofile.name == "BREATH":
             self.curprofile = BreathingProfile(self.pixels)
             self.curprofile.rgb = self.deathcolor
             return
@@ -33,7 +33,9 @@ class MinecraftProfile(GameProfile):
             return
         if self.scale>=50 and not self.curprofile.name =="BASIC":
             self.curprofile = Profile(self.pixels)
-            self.curprofile.rgb = color,wheels.COLORS["GREEN"]
+            self.curprofile.rgb = wheels.COLORS["GREEN"]
+        elif self.scale>=50:
+            self.scale = 20
         x = round(255*self.scale/20)
         color = self.deathcolor
         for i in range(x):

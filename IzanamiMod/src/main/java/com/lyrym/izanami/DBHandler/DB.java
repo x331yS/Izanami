@@ -56,11 +56,11 @@ public class DB {
         return conn;
     }
 
-    public static void UpdateProfile(int score){
+    public static void UpdateProfile(int scale){
         Connection conn = null ;
         Statement statement = null;
 
-        String query = String.format("UPDATE currentprofile SET profile = 'MINECRAFT', scale = %s",score);
+        String query = String.format("UPDATE currentprofile SET profile = 'MINECRAFT', scale = %s",scale);
 
         try{
             //get connection
