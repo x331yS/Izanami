@@ -13,7 +13,7 @@ module.exports = {
 		.setDescription('Make a custom light profile using your parameters'),
     
     
-	async execute(interaction) {
+	async execute(interaction,client) {
         const name = interaction.options.getString('name');
         const red = interaction.options.getInteger('red');
         const green = interaction.options.getInteger('green');
