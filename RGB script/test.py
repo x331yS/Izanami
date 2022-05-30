@@ -25,7 +25,7 @@ ORDER = neopixel.GRB
 pixels = neopixel.NeoPixel(
     pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER
 )
-profile = profiles.ColorFadeProfile(pixels)
+profile = profiles.LoadingProfile(pixels,75)
 while True:
     profile.display()
     

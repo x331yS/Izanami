@@ -78,7 +78,7 @@ class BreathingProfile(Profile):
         time.sleep(self.refresh)
         
     def brightnessController(self):
-        if self.pixels.brightness >= 0.2:
+        if self.pixels.brightness >= 1:
             self.x = -self.x
         elif self.pixels.brightness <= 0:
             self.x = -self.x
@@ -96,21 +96,25 @@ class ColorBreathingProfile(BreathingProfile):
 
 
 class LoadingProfile(Profile):
-    def __init__(self,pixels,cursor=0,refresh=0.5):
+    def __init__(self,pixels,cursor=0,refresh=0.3):
         self.cursor = cursor
         self.cursor2 = cursor
         self.refresh = refresh
         super().__init__(pixels,"LOADING")
+        pixels.fill((0,0,0))
         super().setRGB(wheels.COLORS["RED"])
 
     def display(self):
         self.pixels[self.cursor] = (self.rgb)
         self.pixels[self.cursor2] = (self.rgb)
         self.pixels.show()
-        if self.cursor<150:
+        
+        if self.cursor<149:
             self.cursor+=1
         if self.cursor2>0:
             self.cursor2-=1
+        if self.cursor>149:
+            self.cursor=149
         time.sleep(self.refresh)
     
     def resetCursor(self, cursor):
@@ -147,9 +151,9 @@ class SnakeProfile(IndexProfile):
 class CometProfile(IndexProfile):
     def __init__(self,pixels, refresh=0.05):
         super().__init__(pixels,"COMET")
-        super().setRGB(wheels.COLORS["WHITE"])
+        super().setRGB((255,0,255))
         self.refresh = refresh
-        self.index=[1,2,3]
+        self.index=[1,2,3,4]
         self.x = 1
 
     def cleanArray(self, arr):
@@ -158,7 +162,7 @@ class CometProfile(IndexProfile):
         super().display()
     
         for y in range(len(self.index)):
-            if self.index[y] == 150 or self.index[y] == 0:
+            if self.index[y] == 60 or self.index[y] == 0:
                 self.x = -self.x
                 break
         for y in range(len(self.index)):
@@ -172,7 +176,7 @@ class ColorWaveProfile(Profile):
         super().__init__(pixels,"COLORWAVE")
         self.pixelscolors = PixelColors(150)
         self.refresh = refresh
-        self.startcolor = wheels.COLORS["GREEN"]
+        self.startcolor = wheels.COLORS["YELLOW"]
         self.target = wheels.COLORS["CYAN"]
         self.rgb = self.startcolor
         self.pixelscolors.fillAll(self.startcolor)
