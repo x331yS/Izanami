@@ -32,7 +32,7 @@ while True:
         if curprofile.name!=myresult["profile"]:
             curprofile = Factory(myresult['profile'])(pixels)
             print(curprofile)
-        if curprofile.name == "MINECRAFT":
+        if curprofile.name == "MINECRAFT" or curprofile.name == "TREX":
             curprofile.setScale(myresult['scale'])
         elif curprofile.name == "WEBSITE":
             curprofile.setRGB((myresult['red'],myresult['green'],myresult['blue']))

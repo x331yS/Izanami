@@ -13,7 +13,8 @@ def Factory(role):
         "COLORWAVE": ColorWaveProfile,
         "STARS": StarsProfile,
         "WEBSITE": WebProfile,
-        "MINECRAFT": MinecraftProfile
+        "MINECRAFT": MinecraftProfile,
+        "TREX": TrexProfile
         
     }
     return classes[role]
