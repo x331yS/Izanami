@@ -79,7 +79,7 @@ namespace Trex
                         x.Left = this.ClientSize.Width + rnd.Next(200, 800);
                         // we will add one to the score
                         score++;
-                         string query = $"UPDATE currentprofile SET profile = 'Trex',scale = '{score}'";
+                         string query = $"UPDATE currentprofile SET profile = 'TREX',scale = '{score}'";
                         MySqlCommand command = new MySqlCommand(query, this.connection);
                         try
                         {
@@ -104,7 +104,7 @@ namespace Trex
                         scoreText.Text = "Press R to restart";
                         finalScore.Text = "Your Final score is " + score;
                         score=-1;
-                        string query = $"UPDATE currentprofile SET profile = 'Trex',scale = '{score}'";
+                        string query = $"UPDATE currentprofile SET profile = 'TREX',scale = '{score}'";
                         MySqlCommand command = new MySqlCommand(query, this.connection);
                         try
                         {
@@ -178,7 +178,7 @@ namespace Trex
             obstacleSpeed = 10; // set obstacle speed back to 10
             scoreText.Text = "Score: " + score; // change the score text to just show the score
             trex.Image = Properties.Resources.running; // change the t rex image to running
-            string query = $"UPDATE currentprofile SET profile = 'Trex',scale = '{score}'";
+            string query = $"UPDATE currentprofile SET profile = 'TREX',scale = '{score}'";
                         MySqlCommand command = new MySqlCommand(query, this.connection);
                         try
                         {
