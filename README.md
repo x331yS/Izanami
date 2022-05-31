@@ -10,14 +10,14 @@
 
 ### _As Gamers we loves RGB's_
 
-###### That's a fact, and that why this project exist. **Izanami RGB leds** project consists of creating rgb color profiles with leds that change in real time with certain games like :
+##### That's a fact, and that why this project exist. **Izanami RGB leds** project consists of creating rgb color profiles with leds that change in real time with certain games like :
 
 - Minecraft
 - Trex Game
 - Website
 - Discord
 
-###### Moreover a variety of profile was created for this project to match every __mood__ of the user
+##### Moreover a variety of profile was created for this project to match every __mood__ of the user
 
 - **COLORFADE** : 
 - **BREATH**: ,
