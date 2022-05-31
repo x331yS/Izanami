@@ -5,6 +5,9 @@ const { token } = require('./config.json');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 client.commands = new Collection();
+
+client.cooldowns = false;
+client.COOLDOWN_SECONDS = 10; // replace with desired cooldown time in seconds
 const commandFiles = fs.readdirSync('./src').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
@@ -24,7 +27,7 @@ client.on('interactionCreate', async interaction => {
 	if (!command) return;
 
 	try {
-		await command.execute(interaction);
+		await command.execute(interaction,client);
 	} catch (error) {
 		console.error(error);
 		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });

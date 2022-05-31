@@ -7,7 +7,7 @@ module.exports = {
 		.setDescription('Set the current light using a profile in db'),
     
     
-	async execute(interaction) {
+	async execute(interaction,client) {
         const id = interaction.options.getString('id');
 		await interaction.reply(`Switching RGB to: ${id}`);
 	},

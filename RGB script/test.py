@@ -6,7 +6,7 @@
 import time
 import board
 import neopixel
-import profiles
+from factory import *
 
 import config
 
@@ -25,9 +25,17 @@ ORDER = neopixel.GRB
 pixels = neopixel.NeoPixel(
     pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER
 )
-profile = profiles.ColorFadeProfile(pixels)
+
+t1 = time.time()
+x=0
+profile = Factory("TREX")(pixels)
 while True:
     profile.display()
+    if time.time()-t1 >2:
+        x+=1
+        profile.setScale(x)
+        print(x)
+        t1 = time.time()
     
         
 
