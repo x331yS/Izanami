@@ -39,4 +39,6 @@
 - **Java**: For the Minecraft Izanami Mod
 - **Python**: For all the Led Script Program
 - **Javascript**: For the Discord Bot Plugin
-- **STARS**: 
+- **Shell**: For launch python script on RaspberryPi
+- **MySQL**: For the Database
+- **Markdown**: For the documentation
