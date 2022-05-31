@@ -1,7 +1,5 @@
 <?php
 
-
-
 $color = $_POST['color'];
 list($r, $g, $b) = sscanf($color, "#%02x%02x%02x");
 
@@ -13,7 +11,6 @@ echo $dbname;
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-
 $sql = "UPDATE currentprofile SET profile = 'WEBSITE', red=$r, green=$g, blue=$b";
 
 if ($conn->query($sql) === TRUE) {
