@@ -30,7 +30,7 @@
 
 ## 03_Languages Used
 
-### 10/10 that's the score we need for our project, and it's also the number of languages we use on this project
+### 10/10 that's the score we want for our project, and it's also the number of languages we use on this project
 
 - **HTML** : For the website Structure
 - **CSS** : For the website Style
