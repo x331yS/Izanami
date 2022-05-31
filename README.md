@@ -19,11 +19,24 @@
 
 ##### Moreover a variety of profile was created for this project to match every __mood__ of the user
 
-- **COLORFADE** : 
-- **BREATH**: ,
-- **COLORBREATH**: ,
-- **LOADING**: ,
+- **COLORFADE** : Switch all pixels to changing colors
+- **BREATH**: Switch pixels brightness up to down with one color
+- **COLORBREATH**: Switch pixels brightness up to down with ColorFade colors
+- **LOADING**: Light up pixels one by one until the end of the strip (only 1 color)
 - **SNAKE**: 
 - **COMET**: 
 - **COLORWAVE**: 
+- **STARS**: 
+
+## 03_Languages Used
+
+### 
+
+- **HTML** : For the website Structure
+- **CSS**: For the website Style
+- **PHP**: For the website connexion to database
+- **C#**: For the Trex Game
+- **SNAKE**:
+- **COMET**:
+- **COLORWAVE**:
 - **STARS**: 
