@@ -67,10 +67,11 @@ class ColorFadeProfile(Profile):
         self.rgb = wheels.colorwheel(self.rgb)
 
 class BreathingProfile(Profile):
-    def __init__(self,pixels, refresh=0.02):
+    def __init__(self,pixels, refresh=0.02, brightness=0.2):
         super().__init__(pixels,"BREATH")
         super().setRGB(wheels.COLORS["WHITE"])
         self.refresh = refresh
+        self.brightness = brightness
         self.x = 0.01
 
     def display(self):
@@ -78,7 +79,7 @@ class BreathingProfile(Profile):
         time.sleep(self.refresh)
         
     def brightnessController(self):
-        if self.pixels.brightness >= 1:
+        if self.pixels.brightness >= self.brightness:
             self.x = -self.x
         elif self.pixels.brightness <= 0:
             self.x = -self.x
@@ -172,12 +173,12 @@ class CometProfile(IndexProfile):
 
 
 class ColorWaveProfile(Profile):
-    def __init__(self,pixels,refresh=0.001):
+    def __init__(self,pixels,refresh=0.001,c1 = wheels.COLORS["YELLOW"],c2=wheels.COLORS["WHITE"]):
         super().__init__(pixels,"COLORWAVE")
         self.pixelscolors = PixelColors(150)
         self.refresh = refresh
-        self.startcolor = wheels.COLORS["YELLOW"]
-        self.target = wheels.COLORS["CYAN"]
+        self.startcolor = c1
+        self.target = c2
         self.rgb = self.startcolor
         self.pixelscolors.fillAll(self.startcolor)
         self.start()

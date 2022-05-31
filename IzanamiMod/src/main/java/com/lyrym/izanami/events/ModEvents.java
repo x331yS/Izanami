@@ -3,10 +3,9 @@ package com.lyrym.izanami.events;
 import com.lyrym.izanami.DBHandler.DB;
 import com.lyrym.izanami.Izanami;
 import net.minecraft.world.entity.player.Player;
-import net.minecraftforge.event.entity.living.LivingDamageEvent;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
-import net.minecraftforge.event.entity.living.LivingHealEvent;
-import net.minecraftforge.event.entity.living.LivingSpawnEvent;
+import net.minecraft.world.food.Foods;
+import net.minecraft.world.item.EnchantedGoldenAppleItem;
+import net.minecraftforge.event.entity.living.*;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -66,6 +65,34 @@ public class ModEvents {
             DB.UpdateProfile(-100);
             System.out.println(-100);
 
+        }
+    }
+    @SubscribeEvent
+    public static void StartEatingListener(LivingEntityUseItemEvent.Start event){
+        if(event.getEntity() instanceof Player){
+            if(event.getItem().getItem().isEdible()){
+                System.out.println("Eat Start");
+            }
+        }
+
+
+    }
+
+    @SubscribeEvent
+    public static void StopEatingListener(LivingEntityUseItemEvent.Stop event){
+        if(event.getEntity() instanceof Player) {
+            if (event.getItem().getItem().isEdible()) {
+                System.out.println("Eat Stop");
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void FinishEatingListener(LivingEntityUseItemEvent.Finish event){
+        if(event.getEntity() instanceof Player) {
+            if (event.getItem().getItem().isEdible()) {
+                System.out.println("Eat End");
+            }
         }
     }
 
