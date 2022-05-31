@@ -24,21 +24,21 @@
 - **COLORBREATH**: Switch pixels brightness up to down with ColorFade colors
 - **LOADING**: Light up pixels one by one until the end of the strip (only 1 color)
 - **SNAKE**: Light a set of pixels that moves along the strip
-- **COMET**: 
-- **COLORWAVE**: 
-- **STARS**: 
+- **COMET**: Light a set of pixels that moves along the strip then bounce at the extremities
+- **COLORWAVE**: Light pixels with 2 colors and a wave style
+- **STARS**: Light pixels randomly with 2 colors
 
 ## 03_Languages Used
 
-### 
+### 10/10 that's the score we need for our project, and it's also the number of languages we use on this project
 
 - **HTML** : For the website Structure
-- **CSS**: For the website Style
-- **PHP**: For the website connexion to database
-- **C#**: For the Trex Game program
-- **Java**: For the Minecraft Izanami Mod
-- **Python**: For all the Led Script Program
-- **Javascript**: For the Discord Bot Plugin
-- **Shell**: For launch python script on RaspberryPi
-- **MySQL**: For the Database
-- **Markdown**: For the documentation
+- **CSS** : For the website Style
+- **PHP** : For the website connexion to database
+- **C#** : For the Trex Game program
+- **Java** : For the Minecraft Izanami Mod
+- **Python** : For all the Led Script Program
+- **Javascript** : For the Discord Bot Plugin
+- **Shell** : For launch python script on RaspberryPi
+- **MySQL** : For the Database
+- **Markdown** : For the documentation
