@@ -31,14 +31,22 @@
 ## 03_Languages Used
 
 ### 10/10 that's the score we want for our project, and it's also the number of languages we use on this project
+- ***Website*** 
+  - **HTML** : For the website Structure
+  - **CSS** : For the website Style
+  - **PHP** : For the website connexion to database
+- ***Trex Game***
+  - **C#** : For the Trex Game program
+- ***Minecraft Mod***
+  - **Java** : For the Minecraft Izanami Mod
+- ***RGB Profile***
+  - **Python** : For all the Led Script Program
+  - **Shell** : For launch python script on RaspberryPi
+- ***Discord Bot***
+  - **Javascript** : For the Discord Bot Plugin
+- ***Database***
+  - **MySQL** : For the Database
+- ***Documentation***
+  - **Markdown** : For the documentation
 
-- **HTML** : For the website Structure
-- **CSS** : For the website Style
-- **PHP** : For the website connexion to database
-- **C#** : For the Trex Game program
-- **Java** : For the Minecraft Izanami Mod
-- **Python** : For all the Led Script Program
-- **Javascript** : For the Discord Bot Plugin
-- **Shell** : For launch python script on RaspberryPi
-- **MySQL** : For the Database
-- **Markdown** : For the documentation
+## 04_Hardware
