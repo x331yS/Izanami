@@ -67,10 +67,11 @@ class ColorFadeProfile(Profile):
         self.rgb = wheels.colorwheel(self.rgb)
 
 class BreathingProfile(Profile):
-    def __init__(self,pixels, refresh=0.02):
+    def __init__(self,pixels, refresh=0.02, brightness=0.2):
         super().__init__(pixels,"BREATH")
         super().setRGB(wheels.COLORS["WHITE"])
         self.refresh = refresh
+        self.brightness = brightness
         self.x = 0.01
 
     def display(self):
@@ -78,7 +79,7 @@ class BreathingProfile(Profile):
         time.sleep(self.refresh)
         
     def brightnessController(self):
-        if self.pixels.brightness >= 1:
+        if self.pixels.brightness >= self.brightness:
             self.x = -self.x
         elif self.pixels.brightness <= 0:
             self.x = -self.x

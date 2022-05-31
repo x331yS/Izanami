@@ -60,10 +60,12 @@ class TrexProfile(GameProfile):
             self.oldscale = self.scale
     def mainChanges(self):
         if self.scale < 0 and not self.curprofile.name == "BREATH":
-            self.curprofile = BreathingProfile(self.pixels)
+            self.curprofile = BreathingProfile(self.pixels,0.01)
             self.curprofile.rgb = self.deathcolor
             return
-        if self.scale>0 and not self.curprofile.name =="SNAKE":
+        elif self.scale < 0:
+            return
+        if self.scale >=0 and not self.curprofile.name =="SNAKE":
             self.curprofile = SnakeProfile(self.pixels)
             self.curprofile.rgb = wheels.COLORS["WHITE"]
         self.scale = self.scale%50
