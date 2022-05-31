@@ -173,12 +173,12 @@ class CometProfile(IndexProfile):
 
 
 class ColorWaveProfile(Profile):
-    def __init__(self,pixels,refresh=0.001):
+    def __init__(self,pixels,refresh=0.001,c1 = wheels.COLORS["YELLOW"],c2=wheels.COLORS["WHITE"]):
         super().__init__(pixels,"COLORWAVE")
         self.pixelscolors = PixelColors(150)
         self.refresh = refresh
-        self.startcolor = wheels.COLORS["YELLOW"]
-        self.target = wheels.COLORS["CYAN"]
+        self.startcolor = c1
+        self.target = c2
         self.rgb = self.startcolor
         self.pixelscolors.fillAll(self.startcolor)
         self.start()
