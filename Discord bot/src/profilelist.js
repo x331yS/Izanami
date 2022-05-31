@@ -15,6 +15,11 @@ module.exports = {
 
 	async execute(interaction,client) {
 
+		if (client.cooldowns) {
+			// cooldown not ended
+			interaction.reply({ content: "Please wait for cooldown to end", ephemeral: true });
+		  } else {
+
 		const exampleEmbed = new MessageEmbed()
 	.setColor('#0099ff')
 	.setTitle('Profile List')
@@ -47,5 +52,16 @@ module.exports = {
 			interaction.reply({ embeds: [ exampleEmbed ] });
             });
         con.end();
+			
+	//now, set cooldown
+    client.cooldowns=true;
+
+    // After the time you specified, remove the cooldown
+    setTimeout(() => {
+      client.cooldowns=false;
+    }, client.COOLDOWN_SECONDS * 1000);
+
+	}
+
 	},
 };

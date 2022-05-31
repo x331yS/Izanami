@@ -14,6 +14,10 @@ module.exports = {
     
     
 	async execute(interaction,client) {
+    if (client.cooldowns) {
+      // cooldown not ended
+      interaction.reply({ content: "Please wait for cooldown to end", ephemeral: true });
+    } else {
         const name = interaction.options.getString('name');
         const red = interaction.options.getInteger('red');
         const green = interaction.options.getInteger('green');
@@ -38,6 +42,16 @@ module.exports = {
             });
         con.end();
 
-		await interaction.reply(`Switching RGB to: ${red.toString()}, ${green.toString()}, ${blue.toString()}`);
+		  await interaction.reply(`Switching RGB to: ${red.toString()}, ${green.toString()}, ${blue.toString()}`);
+     //now, set cooldown
+    client.cooldowns=true;
+
+    // After the time you specified, remove the cooldown
+    setTimeout(() => {
+      client.cooldowns=false;
+    }, client.COOLDOWN_SECONDS * 1000);
+
+    }
+
 	},
 };
