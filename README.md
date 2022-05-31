@@ -23,7 +23,7 @@
 - **BREATH**: Switch pixels brightness up to down with one color
 - **COLORBREATH**: Switch pixels brightness up to down with ColorFade colors
 - **LOADING**: Light up pixels one by one until the end of the strip (only 1 color)
-- **SNAKE**: 
+- **SNAKE**: Light a set of pixels that moves along the strip
 - **COMET**: 
 - **COLORWAVE**: 
 - **STARS**: 
@@ -35,8 +35,8 @@
 - **HTML** : For the website Structure
 - **CSS**: For the website Style
 - **PHP**: For the website connexion to database
-- **C#**: For the Trex Game
-- **SNAKE**:
-- **COMET**:
-- **COLORWAVE**:
+- **C#**: For the Trex Game program
+- **Java**: For the Minecraft Izanami Mod
+- **Python**: For all the Led Script Program
+- **Javascript**: For the Discord Bot Plugin
 - **STARS**: 
