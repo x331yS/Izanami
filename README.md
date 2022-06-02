@@ -1,6 +1,8 @@
 # Izanami - 伊邪那美
 
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/paJrmX9wVw0)
+## Presentation Trailer
+
+https://user-images.githubusercontent.com/71019197/171691989-a6d6e3e0-2fcf-48f6-a903-6bdeeb2ffc98.mp4
 
 ## 00_How Be a RGB Gamer
 
@@ -13,7 +15,7 @@
 - Connect the leds to your Raspberry
   - > Follow the [Raspberry Documentation](https://github.com/x33lyS/Izanami/tree/main/Documentation/Raspberry) instructions
 - Now you can run the ``run.sh`` in your Raspberry
-  - > For that just go in your raspberry termianl and do a ``sudo bash ./RaspBerryPi/RGB_Script/run.sh``
+  - > For that just go in your raspberry terminal and do a ``sudo bash ./RaspBerryPi/RGB_Script/run.sh``
 
 ## 01_Name description
 
