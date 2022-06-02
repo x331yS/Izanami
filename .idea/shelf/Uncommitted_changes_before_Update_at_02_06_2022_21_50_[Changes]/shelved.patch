@@ -1,0 +1,108 @@
+Index: Website/config.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\n$servername = \"xxx.xxx.xxx.xxx\";\r\n$username = \"Username\";\r\n$password = \"xxxxxxxxxxxx\";\r\n$dbname = \"DBName\"\r\n\r\n?>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Website/config.php b/Website/config.php
+--- a/Website/config.php	(revision 36a93dae07aac19c66f51320a3cb9ba98ab7b062)
++++ b/Website/config.php	(date 1654198050194)
+@@ -1,8 +1,6 @@
+ <?php
+-
+-$servername = "xxx.xxx.xxx.xxx";
+-$username = "Username";
+-$password = "xxxxxxxxxxxx";
+-$dbname = "DBName"
+-
++      $servername = 1234;
++      $username = 1254;
++      $password = 51445;
++      $dbname = 6487
+ ?>
+Index: config.sh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#!/bin/bash\r\n\r\necho\r\necho Hello mate, I am Izanami, i will configure your database to all my folder\r\necho First of all, I need some informations about your database, it is only 4 steps\r\necho\r\necho No worry I keep this informations for me, if you fail somewhere just relaunch this file\r\necho\r\necho 01_What is your Hostname IP Database \"( exemple 119.27.80.186 )\"\r\nread server\r\necho\r\necho 02_Thanks,next I need the username Database\r\nread username\r\necho\r\necho 03_Good,next I need the password of the Database\r\nread password\r\necho\r\necho 04_Nice, now I need the database name\r\nread database\r\necho\r\necho Your server is $server\r\necho Your database username is $username\r\necho Your database password is $password\r\necho Your database name is $database\r\necho\r\necho Updating configuration file ...\r\necho\r\necho Website configuration file\r\necho \"<?php\r\n      \\$servername = \"$server\";\r\n      \\$username = \"$username\";\r\n      \\$password = \"$password\";\r\n      \\$dbname = \"$database\"\r\n?>\" > Website/config.php\r\necho\r\necho Done!\r\necho Trex configuration file\r\necho \"using System;\r\n      using System.Collections.Generic;\r\n      using System.ComponentModel;\r\n      using System.Data;\r\n      using System.Drawing;\r\n      using System.Linq;\r\n      using System.Text;\r\n      using System.Threading.Tasks;\r\n      using System.Windows.Forms;\r\n      using MySql.Data.MySqlClient;\r\n\r\n      namespace Trex {\r\n          public static class config {\r\n                  public static string server=\"$server\";\r\n                  public static string port=\"3306\";\r\n                  public static string user = \"$username\";\r\n                  public static string password=\"$password\";\r\n                  public static string database=\"$database\";\r\n                  public static string SslMode=\"none\";\r\n      }\r\n}\" > Trex/config.cs\r\necho\r\necho Done!\r\necho Trex configuration file\r\necho \"\r\n{\r\n    \"host\":\"$server\",\r\n    \"user\":\"$username\",\r\n    \"password\" : \"$password\",\r\n    \"database\" : \"$database\"\r\n}\" > Trex/config.cs\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/config.sh b/config.sh
+--- a/config.sh	(revision 36a93dae07aac19c66f51320a3cb9ba98ab7b062)
++++ b/config.sh	(date 1654199408827)
+@@ -27,7 +27,7 @@
+ echo
+ echo Website configuration file
+ echo "<?php
+-      \$servername = "$server";
++      \$servername = "$server:3306";
+       \$username = "$username";
+       \$password = "$password";
+       \$dbname = "$database"
+@@ -58,14 +58,21 @@
+ }" > Trex/config.cs
+ echo
+ echo Done!
+-echo Trex configuration file
+-echo "
+-{
+-    "host":"$server",
+-    "user":"$username",
+-    "password" : "$password",
+-    "database" : "$database"
+-}" > Trex/config.cs
++echo Discord Configuration File
++echo '{
++    "host":"'$server'",
++    "user":"'$username'",
++    "password" : "'$password'",
++    "database" : "'$database'"
++}' > Discord_Bot/src/db/credentials.json
++echo
++echo Done!
++echo Minecraft Configuration File
++echo "db.user=$username
++      db.password=$password
++      db.url=jdbc:mysql://$server:3306/$database" > Minecraft/run/config.properties
++echo
++echo Done!
+ 
+ 
+ 
+diff --git a/IzanamiMod/CREDITS.txt b/Minecraft/IzanamiMod/CREDITS.txt
+rename from IzanamiMod/CREDITS.txt
+rename to Minecraft/IzanamiMod/CREDITS.txt
+diff --git a/IzanamiMod/changelog.txt b/Minecraft/IzanamiMod/changelog.txt
+rename from IzanamiMod/changelog.txt
+rename to Minecraft/IzanamiMod/changelog.txt
+diff --git a/IzanamiMod/LICENSE.txt b/Minecraft/IzanamiMod/LICENSE.txt
+rename from IzanamiMod/LICENSE.txt
+rename to Minecraft/IzanamiMod/LICENSE.txt
+diff --git a/IzanamiMod/.gitignore b/Minecraft/IzanamiMod/.gitignore
+rename from IzanamiMod/.gitignore
+rename to Minecraft/IzanamiMod/.gitignore
+diff --git a/IzanamiMod/build.gradle b/Minecraft/IzanamiMod/build.gradle
+rename from IzanamiMod/build.gradle
+rename to Minecraft/IzanamiMod/build.gradle
+diff --git a/IzanamiMod/gradle.properties b/Minecraft/IzanamiMod/gradle.properties
+rename from IzanamiMod/gradle.properties
+rename to Minecraft/IzanamiMod/gradle.properties
+diff --git a/IzanamiMod/gradle/wrapper/gradle-wrapper.properties b/Minecraft/IzanamiMod/gradle/wrapper/gradle-wrapper.properties
+rename from IzanamiMod/gradle/wrapper/gradle-wrapper.properties
+rename to Minecraft/IzanamiMod/gradle/wrapper/gradle-wrapper.properties
+diff --git a/IzanamiMod/src/main/resources/META-INF/mods.toml b/Minecraft/IzanamiMod/src/main/resources/META-INF/mods.toml
+rename from IzanamiMod/src/main/resources/META-INF/mods.toml
+rename to Minecraft/IzanamiMod/src/main/resources/META-INF/mods.toml
+diff --git a/IzanamiMod/src/main/java/com/lyrym/izanami/DBHandler/DB.java b/Minecraft/IzanamiMod/src/main/java/com/lyrym/izanami/DBHandler/DB.java
+rename from IzanamiMod/src/main/java/com/lyrym/izanami/DBHandler/DB.java
+rename to Minecraft/IzanamiMod/src/main/java/com/lyrym/izanami/DBHandler/DB.java
+diff --git a/IzanamiMod/src/main/java/com/lyrym/izanami/events/ModEvents.java b/Minecraft/IzanamiMod/src/main/java/com/lyrym/izanami/events/ModEvents.java
+rename from IzanamiMod/src/main/java/com/lyrym/izanami/events/ModEvents.java
+rename to Minecraft/IzanamiMod/src/main/java/com/lyrym/izanami/events/ModEvents.java
+diff --git a/IzanamiMod/src/main/java/com/lyrym/izanami/Izanami.java b/Minecraft/IzanamiMod/src/main/java/com/lyrym/izanami/Izanami.java
+rename from IzanamiMod/src/main/java/com/lyrym/izanami/Izanami.java
+rename to Minecraft/IzanamiMod/src/main/java/com/lyrym/izanami/Izanami.java
+diff --git a/IzanamiMod/README.txt b/Minecraft/IzanamiMod/README.txt
+rename from IzanamiMod/README.txt
+rename to Minecraft/IzanamiMod/README.txt

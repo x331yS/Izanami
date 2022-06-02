@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="164091ed-6802-42ea-a1e9-4ad2068fcc55" name="Changes" comment="Update config" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="29vBFVxuqem97RqeqelcUXkpauZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Florian\Code\Izanami\Minecraft" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="164091ed-6802-42ea-a1e9-4ad2068fcc55" name="Changes" comment="" />
+      <created>1653983580812</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653983580812</updated>
+      <workItem from="1653983584595" duration="3084000" />
+      <workItem from="1654188595657" duration="2804000" />
+      <workItem from="1654191493373" duration="5644000" />
+    </task>
+    <task id="LOCAL-00001" summary="README.md">
+      <created>1653985174229</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653985174229</updated>
+    </task>
+    <task id="LOCAL-00002" summary="README.md">
+      <created>1653985241755</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653985241755</updated>
+    </task>
+    <task id="LOCAL-00003" summary="README.md">
+      <created>1653985456221</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653985456221</updated>
+    </task>
+    <task id="LOCAL-00004" summary="README.md">
+      <created>1653985567289</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653985567289</updated>
+    </task>
+    <task id="LOCAL-00005" summary="README.md">
+      <created>1653985653548</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653985653548</updated>
+    </task>
+    <task id="LOCAL-00006" summary="README.md">
+      <created>1653985913815</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1653985913815</updated>
+    </task>
+    <task id="LOCAL-00007" summary="README.md">
+      <created>1653985935267</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653985935267</updated>
+    </task>
+    <task id="LOCAL-00008" summary="README.md">
+      <created>1653986390631</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1653986390631</updated>
+    </task>
+    <task id="LOCAL-00009" summary="README.md">
+      <created>1653986582292</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1653986582292</updated>
+    </task>
+    <task id="LOCAL-00010" summary="README.md">
+      <created>1653986689660</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1653986689660</updated>
+    </task>
+    <task id="LOCAL-00011" summary="README.md">
+      <created>1654188672291</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1654188672291</updated>
+    </task>
+    <task id="LOCAL-00012" summary="README.md">
+      <created>1654189580656</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1654189580656</updated>
+    </task>
+    <task id="LOCAL-00013" summary="README.md">
+      <created>1654189604373</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1654189604373</updated>
+    </task>
+    <task id="LOCAL-00014" summary="README.md">
+      <created>1654190732740</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1654190732740</updated>
+    </task>
+    <task id="LOCAL-00015" summary="README.md">
+      <created>1654190792447</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1654190792447</updated>
+    </task>
+    <task id="LOCAL-00016" summary="README.md">
+      <created>1654191019218</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1654191019218</updated>
+    </task>
+    <task id="LOCAL-00017" summary="README.md">
+      <created>1654191358399</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1654191358399</updated>
+    </task>
+    <task id="LOCAL-00018" summary="README.md">
+      <created>1654191671877</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1654191671878</updated>
+    </task>
+    <task id="LOCAL-00019" summary="README.md">
+      <created>1654191691795</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1654191691796</updated>
+    </task>
+    <task id="LOCAL-00020" summary="README.md">
+      <created>1654192178845</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1654192178845</updated>
+    </task>
+    <task id="LOCAL-00021" summary="README.md">
+      <created>1654197140459</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1654197140459</updated>
+    </task>
+    <task id="LOCAL-00022" summary="README.md">
+      <created>1654197491839</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1654197491839</updated>
+    </task>
+    <task id="LOCAL-00023" summary="README.md">
+      <created>1654198292459</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1654198292459</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="README.md" />
+    <MESSAGE value="Update config" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update config" />
+  </component>
+</project>

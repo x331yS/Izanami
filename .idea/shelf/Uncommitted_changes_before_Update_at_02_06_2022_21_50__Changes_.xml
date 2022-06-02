@@ -1,0 +1,29 @@
+<changelist name="Uncommitted_changes_before_Update_at_02_06_2022_21_50_[Changes]" date="1654199432383" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2022_21_50_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 02/06/2022 21:50 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="IzanamiMod/gradlew" />
+    <option name="AFTER_PATH" value="Minecraft/IzanamiMod/gradlew" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2022_21_50_[Changes]/gradlew" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="IzanamiMod/gradle/wrapper/gradle-wrapper.jar" />
+    <option name="AFTER_PATH" value="Minecraft/IzanamiMod/gradle/wrapper/gradle-wrapper.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2022_21_50_[Changes]/gradle-wrapper.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="IzanamiMod/src/main/resources/pack.mcmeta" />
+    <option name="AFTER_PATH" value="Minecraft/IzanamiMod/src/main/resources/pack.mcmeta" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2022_21_50_[Changes]/pack.mcmeta" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="IzanamiMod/gradlew.bat" />
+    <option name="AFTER_PATH" value="Minecraft/IzanamiMod/gradlew.bat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2022_21_50_[Changes]/gradlew.bat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="IzanamiMod/.gitattributes" />
+    <option name="AFTER_PATH" value="Minecraft/IzanamiMod/.gitattributes" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2022_21_50_[Changes]/.gitattributes" />
+  </binary>
+</changelist>
