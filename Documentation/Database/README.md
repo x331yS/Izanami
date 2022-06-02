@@ -44,4 +44,4 @@ CREATE TABLE profiles (
 );
 ```
 
-The presetprofile table will have the special profiles in it. We will come soon with a script that updates them automatically.
+We will come soon with a script that updates preset profiles automatically.
