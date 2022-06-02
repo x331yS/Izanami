@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
+const { Permissions } = require('discord.js');
 const {host,user, password, database} = require('./db/credentials.json');
 const mysql = require('mysql');
 
@@ -12,7 +13,7 @@ module.exports = {
     
 	async execute(interaction,client) {
 
-    if (client.cooldowns) {
+    if (client.cooldowns && !interaction.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) {
       // cooldown not ended
       interaction.reply({ content: "Please wait for cooldown to end", ephemeral: true });
     } else {
