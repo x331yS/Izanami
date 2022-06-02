@@ -1,5 +1,7 @@
 # Izanami - 伊邪那美
 
+https://user-images.githubusercontent.com/71019197/171691546-a70acd72-027b-4cbb-8dc0-4ad743438790.mp4
+
 ## 00_How Be a RGB Gamer
 
 - First of all, you need to create your MySQL Database, the [MySql Documentation](https://github.com/x33lyS/Izanami/tree/main/Documentation/Database) will help you
