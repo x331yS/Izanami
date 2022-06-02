@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const {host, user, password, database} = require('./db/credentials.json');
+const { Permissions } = require('discord.js');
 const mysql = require('mysql');
 
 module.exports = {
@@ -9,6 +10,12 @@ module.exports = {
     
     
 	async execute(interaction,client) {
+
+		if (!interaction.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) {
+			
+			await interaction.reply({ content: "You don't have the permissions to use this command", ephemeral: true });
+			return
+		}
 	
 		var con = mysql.createConnection({
 			host: host,
