@@ -25,10 +25,8 @@ We call the `Profile.display()` method every tick to update pixels, for further 
 
 The current profile type and options is taken from a json file
 
-<aside>
-💡 Note: We use a json file so there’s close to no delay to retrieve data instead of querying the database every tick. However this means the json has to be updated outside of the main script.
-
-</aside>
+> Note: We use a json file so there’s close to no delay to retrieve data instead of querying the database every tick. However this means the json has to be updated outside of the main script.
+> 
 
 Using the name of the profile we create a new profile instance:
 `profile = Factory(name)(args)`
