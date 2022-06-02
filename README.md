@@ -1,7 +1,8 @@
 # Izanami - 伊邪那美
 
-## 00_How Be a RGB Gamer
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/paJrmX9wVw0)
 
+## 00_How Be a RGB Gamer
 
 - First of all, you need to create your MySQL Database, the [MySql Documentation](https://github.com/x33lyS/Izanami/tree/main/Documentation/Database) will help you
   - > A script will be add later for easy configuration ( with leds profiles updated) 
