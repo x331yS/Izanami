@@ -55,7 +55,7 @@ This is where you change pixels brightness.
 
 ### Profile.display()
 
-calls both controllers then lights the pixels accordingly.
+Calls both controllers then lights the pixels accordingly.
 
 ## Special Profile Classes
 
@@ -63,3 +63,19 @@ calls both controllers then lights the pixels accordingly.
 
 Those are the profiles that inherit from the base profile and are located in `profiles.py`
 For example the `IndexProfile` which light up not all the pixels but only the ones in a list.
+We will add a more detailed documentation of each profiles later.
+
+> Note: `pixelclass.py` is a file that contains the object `PixelColors` this class is used to store and retrieve the pixels current color and status independently.
+> 
+
+### Game Profiles
+
+A game profile has a `name` a current light `Profile` and the strip `pixels` attributes.
+
+### GameProfile.mainChanges()
+
+This is where you change your current profile depending on the game data
+
+### GameProfile.display()
+
+Calls the `mainChanges()` and the current profile `display()` function
