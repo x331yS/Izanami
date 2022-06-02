@@ -40,7 +40,7 @@ CREATE TABLE profiles (
     name VARCHAR(255) NOT NULL,
     red INT,
     green INT,
-		scale INT,
+    scale INT,
 );
 ```
 
