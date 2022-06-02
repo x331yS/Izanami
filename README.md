@@ -1,6 +1,6 @@
 # Izanami - 伊邪那美
 
-- Presentation Trailer -
+## Presentation Trailer
 
 https://user-images.githubusercontent.com/71019197/171691989-a6d6e3e0-2fcf-48f6-a903-6bdeeb2ffc98.mp4
 
