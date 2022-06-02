@@ -19,7 +19,7 @@ you’ll also need to import the Mysql Connector library for database handling
 This script (`Main.py`) update pixels status in a loop, every iteration of the loop is basically a tick.
 We made light profiles to update the pixels along a certain pattern.
 
-We call the `Profile.display()` method every tick to update pixels, for further explanation on how those profiles work refer to the **[OOP](https://github.com/x33lyS/Izanami/tree/main/Documentation/RGB_Scripts#oop)** section.
+We call the `Profile.display()` method every tick to update pixels, for further explanation on how those profiles work refer to the **[OOP](#oop)** section.
 
 ### Profiles Handling
 
