@@ -35,6 +35,24 @@ Using the name of the profile we create a new profile instance:
 
 We retrieve the data we want in a separate script : `writetojson.py`
 
-using our database credentials stored in `config.py`
+This script is launched along `[Main.py](http://Main.py)` with `[run.sh](http://run.sh)` but you can do it manually by using screen.
+
+We connect to the database using our credentials stored in `config.py`
 
 ## OOP
+
+## Profile Class
+
+A basic light profile has a `name` a color `rgb` and the strip `pixels` attributes.
+
+### Profile.colorController()
+
+This is where you change pixels colors.
+
+### Profile.brightnessController()
+
+This is where you change pixels brightness.
+
+### Profile.display()
+
+calls both controllers then lights the pixels accordingly.
