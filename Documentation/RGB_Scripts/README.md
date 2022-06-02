@@ -56,3 +56,10 @@ This is where you change pixels brightness.
 ### Profile.display()
 
 calls both controllers then lights the pixels accordingly.
+
+## Special Profile Classes
+
+### Child Profiles
+
+Those are the profiles that inherit from the base profile and are located in `profiles.py`
+For example the `IndexProfile` which light up not all the pixels but only the ones in a list.
