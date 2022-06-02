@@ -70,5 +70,5 @@ Distributed under the MIT License. See ``LICENSE`` for more information.
 
 ## 07_Authors
 
-[x33lyS](https://github.com/x33lyS)
-[Lyrym](https://github.com/Lyrym)
+- [x33lyS](https://github.com/x33lyS)
+- [Lyrym](https://github.com/Lyrym)
