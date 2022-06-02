@@ -19,7 +19,7 @@ you’ll also need to import the Mysql Connector library for database handling
 This script (`Main.py`) update pixels status in a loop, every iteration of the loop is basically a tick.
 We made light profiles to update the pixels along a certain pattern.
 
-We call the `Profile.display()` method every tick to update pixels, for further explanation on how those profiles work refer to the **OOP** section.
+We call the `Profile.display()` method every tick to update pixels, for further explanation on how those profiles work refer to the **[OOP](https://github.com/x33lyS/Izanami/blob/main/RGB%20script/README.md#oop)** section.
 
 ### Profiles Handling
 
@@ -35,7 +35,7 @@ Using the name of the profile we create a new profile instance:
 
 We retrieve the data we want in a separate script : `writetojson.py`
 
-This script is launched along `[Main.py](http://Main.py)` with `[run.sh](http://run.sh)` but you can do it manually by using screen.
+This script is launched along `Main.py` with `run.sh` but you can do it manually by using screen.
 
 We connect to the database using our credentials stored in `config.py`
 
