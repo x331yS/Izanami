@@ -25,6 +25,7 @@ echo Your database name is $database
 echo
 echo Updating configuration file ...
 echo
+echo Website configuration file
 
 
 
