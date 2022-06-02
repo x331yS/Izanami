@@ -15,7 +15,7 @@ https://user-images.githubusercontent.com/71019197/171691989-a6d6e3e0-2fcf-48f6-
 - Connect the leds to your Raspberry
   - > Follow the [Raspberry Documentation](https://github.com/x33lyS/Izanami/tree/main/Documentation/Raspberry) instructions
 - Now you can run the ``run.sh`` in your Raspberry
-  - > For that just go in your raspberry termianl and do a ``sudo bash ./RaspBerryPi/RGB_Script/run.sh``
+  - > For that just go in your raspberry terminal and do a ``sudo bash ./RaspBerryPi/RGB_Script/run.sh``
 
 ## 01_Name description
 
