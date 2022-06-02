@@ -40,6 +40,11 @@ module.exports = {
             if (err) throw err;
             console.log("New row inserted!");
             });
+          sql = `UPDATE currentprofile SET profile = 'BASIC',red = ${red.toString()},green = ${green.toString()},blue = ${blue.toString()}`
+            con.query(sql, function (err, result) {
+            if (err) throw err;
+            console.log("Current profile updated");
+            });
         con.end();
 
 		  await interaction.reply(`Switching RGB to: ${red.toString()}, ${green.toString()}, ${blue.toString()}`);
