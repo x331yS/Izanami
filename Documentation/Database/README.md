@@ -27,9 +27,9 @@ CREATE TABLE currentprofile (
     profile VARCHAR(255) NOT NULL,
     red INT,
     green INT,
-		blue INT,
-		scale INT,
-		toggle BOOL,
+    blue INT,
+    scale INT,
+    toggle BOOL,
 );
 CREATE TABLE presetprofile (
     id INT NOT NULL AUTO_INCREMENT,
