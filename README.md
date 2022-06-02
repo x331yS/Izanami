@@ -1,5 +1,7 @@
 # Izanami - 伊邪那美
 
+
+
 ## 01_Name description
 
 #### _Project Izanami Myô-ô, dans la mythologie japonaise, Izanami (イザナミ?, qui signifie « celle qui invite ») est à la fois la déesse de la création et de la mort et la première femme du dieu Izanagi. Myô-ô terme sanskrit signifiant Roi de connaissances ou du savoir._
@@ -68,5 +70,5 @@ Distributed under the MIT License. See ``LICENSE`` for more information.
 
 ## 07_Authors
 
-[x33lyS](https://github.com/x33lyS)
-[Lyrym](https://github.com/Lyrym)
+- [x33lyS](https://github.com/x33lyS)
+- [Lyrym](https://github.com/Lyrym)
