@@ -1,6 +1,8 @@
 # Izanami - 伊邪那美
 
-https://user-images.githubusercontent.com/71019197/171691546-a70acd72-027b-4cbb-8dc0-4ad743438790.mp4
+- Presentation Trailer -
+
+https://user-images.githubusercontent.com/71019197/171691989-a6d6e3e0-2fcf-48f6-a903-6bdeeb2ffc98.mp4
 
 ## 00_How Be a RGB Gamer
 
