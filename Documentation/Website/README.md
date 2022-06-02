@@ -8,7 +8,7 @@
 For the website setup you need only two steps :
 
 - Put your website online with a domain name
-- Change the ``config.php`` path to work in the ``action.php`` line `7`
+- In the ``action.php`` line `7` change the ``config.php`` path to work with the database 
 > Warning if you put the config.php file in the domain name path or after, all of your database configuration will be public.
 > Try to move it in the path we make ( the file will work, and it will be inaccessible for unwanted visitors)
 - Now you can change the color of your light on your website
