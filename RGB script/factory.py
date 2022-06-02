@@ -6,6 +6,7 @@ def Factory(role):
         "INDEX": IndexProfile,
         "COLORFADE": ColorFadeProfile,
         "BREATH": BreathingProfile,
+        "FLASH" : FlashProfile,
         "COLORBREATH": ColorBreathingProfile,
         "LOADING": LoadingProfile,
         "SNAKE": SnakeProfile,

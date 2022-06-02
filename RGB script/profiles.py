@@ -87,6 +87,31 @@ class BreathingProfile(Profile):
         self.pixels.brightness += self.x
         print(self.pixels.brightness)
 
+class FlashProfile(Profile):
+    def __init__(self,pixels, refresh=0.001, brightness=1):
+        super().__init__(pixels,"FLASH")
+        super().setRGB(wheels.COLORS["WHITE"])
+        self.refresh = refresh
+        self.brightness = brightness
+        self.x = -0.06
+
+    def display(self):
+        super().display()
+        time.sleep(self.refresh)
+        
+    def brightnessController(self):
+        
+
+        if self.pixels.brightness <= 0:
+            self.pixels.brightness = self.brightness
+            time.sleep(0.5)
+        if self.pixels.brightness - self.x < 0:
+            self.pixels.brightness = 0
+        else:
+            self.pixels.brightness += self.x
+        
+        print(self.pixels.brightness)
+
 class ColorBreathingProfile(BreathingProfile):
     def __init__(self,pixels):
         super().__init__(pixels)
