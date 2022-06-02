@@ -29,7 +29,7 @@ CREATE TABLE currentprofile (
     green INT,
     blue INT,
     scale INT,
-    toggle BOOL,
+    toggle BOOLEAN,
 );
 CREATE TABLE presetprofile (
     id INT NOT NULL AUTO_INCREMENT,
