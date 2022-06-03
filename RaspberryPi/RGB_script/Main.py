@@ -34,7 +34,7 @@ while True:
             print(curprofile)
         if curprofile.name == "MINECRAFT" or curprofile.name == "TREX":
             curprofile.setScale(myresult['scale'])
-        elif curprofile.name == "WEBSITE":
+        elif curprofile.name == "WEBSITE" or curprofile.name == "BASIC":
             curprofile.setRGB((myresult['red'],myresult['green'],myresult['blue']))
     except:
         print('error retrieving profile')
