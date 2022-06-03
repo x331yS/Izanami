@@ -32,46 +32,46 @@ echo "<?php
       \$password = "$password";
       \$dbname = "$database"
 ?>" > Website/config.php
-echo
-echo Done!
-echo Trex configuration file
-echo "using System;
-      using System.Collections.Generic;
-      using System.ComponentModel;
-      using System.Data;
-      using System.Drawing;
-      using System.Linq;
-      using System.Text;
-      using System.Threading.Tasks;
-      using System.Windows.Forms;
-      using MySql.Data.MySqlClient;
-
-      namespace Trex {
-          public static class config {
-                  public static string server="$server";
-                  public static string port="3306";
-                  public static string user = "$username";
-                  public static string password="$password";
-                  public static string database="$database";
-                  public static string SslMode="none";
-      }
-}" > Trex/config.cs
-echo
-echo Done!
-echo Discord configuration file
-echo '{
-          "host":"'$server'",
-          "user":"'$username'",
-          "password" : "'$password'",
-          "database" : "'$database'"
-}' > Discord_Bot/src/db/credentials.json
-echo
-echo Done!
-echo Minecraft configuration file
-echo "db.user=$username
-      db.password=$password
-      db.url=jdbc:mysql://$server:3306/$database
-"> Minecraft/IzanamiMod/run/config.properties
+#echo
+#echo Done!
+#echo Trex configuration file
+#echo "using System;
+#      using System.Collections.Generic;
+#      using System.ComponentModel;
+#      using System.Data;
+#      using System.Drawing;
+#      using System.Linq;
+#      using System.Text;
+#      using System.Threading.Tasks;
+#      using System.Windows.Forms;
+#      using MySql.Data.MySqlClient;
+#
+#      namespace Trex {
+#          public static class config {
+#                  public static string server="$server";
+#                  public static string port="3306";
+#                  public static string user = "$username";
+#                  public static string password="$password";
+#                  public static string database="$database";
+#                  public static string SslMode="none";
+#      }
+#}" > Trex/config.cs
+#echo
+#echo Done!
+#echo Discord configuration file
+#echo '{
+#          "host":"'$server'",
+#          "user":"'$username'",
+#          "password" : "'$password'",
+#          "database" : "'$database'"
+#}' > Discord_Bot/src/db/credentials.json
+#echo
+#echo Done!
+#echo Minecraft configuration file
+#echo "db.user=$username
+#      db.password=$password
+#      db.url=jdbc:mysql://$server:3306/$database
+#"> Minecraft/IzanamiMod/run/config.properties
 echo
 echo Done!
 
