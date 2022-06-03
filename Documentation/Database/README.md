@@ -52,4 +52,4 @@ CREATE TABLE profiles (
 );
 ```
 
-We will come soon with a script that updates preset profiles automatically.
+> We will come soon with a script that updates preset profiles automatically.
