@@ -4,6 +4,14 @@
 
 We installed our database on a ubuntu device. **[Here](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04)** is a link to the tutorial we followed
 
+> Please note that you need to setup your database timezone too if you plan to use the minecraft mod: the java SQL connector has issues with the system timezone so change it to something like ‘+2:00’.
+Here are the commands:
+>
+```sql
+SELECT @@global.time_zone; //to check your current timezone
+SET GLOBAL time_zone = '+2:00';
+```
+
 ## Structure
 
 The database you created need to contain 3 tables:
@@ -44,4 +52,4 @@ CREATE TABLE profiles (
 );
 ```
 
-We will come soon with a script that updates preset profiles automatically.
+> We will come soon with a script that updates preset profiles automatically.

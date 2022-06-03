@@ -4,7 +4,7 @@
 
 https://user-images.githubusercontent.com/71019197/171691989-a6d6e3e0-2fcf-48f6-a903-6bdeeb2ffc98.mp4
 
-## 00_How Be a RGB Gamer
+## 00_How To Be a RGB Gamer
 
 #### _- Follow the [Installation Configuration](https://github.com/x33lyS/Izanami/tree/main/Documentation)_
 
@@ -12,7 +12,7 @@ https://user-images.githubusercontent.com/71019197/171691989-a6d6e3e0-2fcf-48f6-
 
 #### _Project Izanami Myô-ô, dans la mythologie japonaise, Izanami (イザナミ?, qui signifie « celle qui invite ») est à la fois la déesse de la création et de la mort et la première femme du dieu Izanagi. Myô-ô terme sanskrit signifiant Roi de connaissances ou du savoir._
 
-> Ce nom à était choisi car notre projet vise à étendre notre savoir et nos connaissance, les myō-ō sont les principales divinités du savoir.
+> This name have been choose because our project aims to extend our knowledge on RGB Led, myō-ō are the main deities of knowledge.
 
 ## 02_Project Description
 
@@ -59,6 +59,7 @@ https://user-images.githubusercontent.com/71019197/171691989-a6d6e3e0-2fcf-48f6-
 
 ## 04_Hardware
 
+#### _- Follow the [Hardware Configuration](https://github.com/x33lyS/Izanami/tree/main/Documentation/Raspberry)_
 
 ## 05_Contributing
 
