@@ -58,17 +58,16 @@ echo "using System;
 }" > Trex/config.cs
 echo
 echo Done!
-echo Trex configuration file
-echo "
-{
-    "host":"$server",
-    "user":"$username",
-    "password" : "$password",
-    "database" : "$database"
-}" > Trex/config.cs
+echo Discord configuration file
+echo '{
+          "host":"'$server'",
+          "user":"'$username'",
+          "password" : "'$password'",
+          "database" : "'$database'"
+}' > Discord_Bot/src/db/credentials.json
 echo
 echo Done!
-echo Discord configuration file
+
 
 
 
