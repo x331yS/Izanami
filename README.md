@@ -4,6 +4,8 @@
 
 https://user-images.githubusercontent.com/71019197/171691989-a6d6e3e0-2fcf-48f6-a903-6bdeeb2ffc98.mp4
 
+you can find it on youtube here: https://youtu.be/4BCOjNy1k7c
+
 ## 00_How To Be a RGB Gamer
 
 #### _- Follow the [Installation Configuration](https://github.com/x33lyS/Izanami/tree/main/Documentation)_
