@@ -68,6 +68,7 @@ echo "
 }" > Trex/config.cs
 echo
 echo Done!
+echo Discord configuration file
 
 
 
