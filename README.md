@@ -10,7 +10,7 @@ https://user-images.githubusercontent.com/71019197/171691989-a6d6e3e0-2fcf-48f6-
 
 ## 01_Name description
 
-#### _Izanami no mikoto (伊弉冉尊/伊邪那美命, meaning "she who invites") is a creator deity of both creation and death in Japanese mythology.
+#### Izanami no mikoto (伊弉冉尊/伊邪那美命, meaning "she who invites") is a creator deity of both creation and death in Japanese mythology.
 > We choose this name because our project consist on switching between light on and light off, basically two opposite states, like life and death.
 
 ## 02_Project Description
