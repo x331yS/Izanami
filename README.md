@@ -10,15 +10,14 @@ https://user-images.githubusercontent.com/71019197/171691989-a6d6e3e0-2fcf-48f6-
 
 ## 01_Name description
 
-#### _Project Izanami Myô-ô, dans la mythologie japonaise, Izanami (イザナミ?, qui signifie « celle qui invite ») est à la fois la déesse de la création et de la mort et la première femme du dieu Izanagi. Myô-ô terme sanskrit signifiant Roi de connaissances ou du savoir._
-
-> This name have been choose because our project aims to extend our knowledge on RGB Led, myō-ō are the main deities of knowledge.
+#### _Izanami no mikoto (伊弉冉尊/伊邪那美命, meaning "she who invites") is a creator deity of both creation and death in Japanese mythology.
+> We choose this name because our project consist on switching between light on and light off, basically two opposite states, like life and death.
 
 ## 02_Project Description
 
 ### _As Gamers we loves RGB's_
 
-##### That's a fact, and that why this project exist. **Izanami RGB leds** project consists of creating rgb color profiles with leds that change in real time with certain games like :
+##### That's a fact, and that why this project exist. **Izanami RGB leds** project consists on creating rgb color profiles with leds that change in real time with certain games like :
 
 - Minecraft
 - Trex Game
