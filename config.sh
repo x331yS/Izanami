@@ -66,6 +66,9 @@ echo "
     "password" : "$password",
     "database" : "$database"
 }" > Trex/config.cs
+echo
+echo Done!
+
 
 
 
