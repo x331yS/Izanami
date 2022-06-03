@@ -1,8 +1,6 @@
 <?php
-
-$servername = "xxx.xxx.xxx.xxx";
-$username = "Username";
-$password = "xxxxxxxxxxxx";
-$dbname = "DBName"
-
+      $servername = "xxx.xxx.xxx.xxxx:3306";
+      $username = "Username";
+      $password = "passwd";
+      $dbname = "DBNAME"
 ?>
