@@ -59,6 +59,7 @@ https://user-images.githubusercontent.com/71019197/171691989-a6d6e3e0-2fcf-48f6-
 
 ## 04_Hardware
 
+#### _- Follow the [Hardware Configuration](https://github.com/x33lyS/Izanami/tree/main/Documentation/Raspberry)_
 
 ## 05_Contributing
 
