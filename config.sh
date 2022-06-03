@@ -27,7 +27,7 @@ echo Updating configuration file ...
 echo
 echo Website configuration file
 echo "<?php
-      \$servername = "$server";
+      \$servername = "$server:3306";
       \$username = "$username";
       \$password = "$password";
       \$dbname = "$database"
@@ -67,6 +67,14 @@ echo '{
 }' > Discord_Bot/src/db/credentials.json
 echo
 echo Done!
+echo Minecraft configuration file
+echo "db.user=$username
+      db.password=$password
+      db.url=jdbc:mysql://$server:3306/$database
+"> Minecraft/IzanamiMod/run/config.properties
+echo
+echo Done!
+
 
 
 
