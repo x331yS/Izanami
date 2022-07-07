@@ -16,10 +16,10 @@ you’ll also need to import the Mysql Connector library for database handling
 
 ### Display
 
-This script (`Main.py`) update pixels status in a loop, every iteration of the loop is basically a tick.
+The script [Main.py](https://github.com/x33lyS/Izanami/blob/main/RaspberryPi/RGB_script/Main.py) update pixels status in a loop, every iteration of the loop is basically a tick.
 We made light profiles to update the pixels along a certain pattern.
 
-We call the `Profile.display()` method every tick to update pixels, for further explanation on how those profiles work refer to the **[OOP](#oop)** section.
+We call the `Profile.display()` method every tick to update pixels, for further explanation on how those profiles work refer to the **[OOP](https://github.com/x33lyS/Izanami/tree/main/Documentation/RGB_Scripts#oop)** section.
 
 ### Profiles Handling
 
@@ -42,6 +42,9 @@ We connect to the database using our credentials stored in `config.py`
 ## OOP
 
 ## Profile Class
+
+> You can find the Profile class in [profiles.py](https://github.com/x33lyS/Izanami/blob/main/RaspberryPi/RGB_script/profiles.py)
+> 
 
 A basic light profile has a `name` a color `rgb` and the strip `pixels` attributes.
 
@@ -69,6 +72,9 @@ We will add a more detailed documentation of each profiles later.
 > 
 
 ### Game Profiles
+
+> You can find the GameProfile class in [gameprofiles.py](https://github.com/x33lyS/Izanami/blob/main/RaspberryPi/RGB_script/gameprofiles.py)
+> 
 
 A game profile has a `name` a current light `Profile` and the strip `pixels` attributes.
 
